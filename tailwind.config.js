@@ -26,6 +26,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         display: ['Lexend', ...defaultTheme.fontFamily.sans],
+        fugaz: ['Fugaz One', 'cursive'],
       },
       maxWidth: {
         '2xl': '40rem',

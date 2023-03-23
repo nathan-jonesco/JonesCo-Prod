@@ -11,8 +11,7 @@ const tiers = [
   {
     name: 'Racing',
     id: 'tier-freelancer',
-    href: '#',
-    price: { monthly: '$15', annually: '$144' },
+    href: 'https://racing.jonesco.autos',
     description: 'The essentials to provide your best work for clients.',
     features: [
       '5 products',
@@ -24,10 +23,9 @@ const tiers = [
     logo: { racinglogo },
   },
   {
-    name: 'Startup',
+    name: 'Off-Road',
     id: 'tier-startup',
-    href: '#',
-    price: { monthly: '$30', annually: '$288' },
+    href: 'https://offroad.jonesco.autos',
     description: 'A plan that scales with your rapidly growing business.',
     features: [
       '25 products',
@@ -37,13 +35,12 @@ const tiers = [
       'Marketing automations',
     ],
     mostPopular: false,
-    logo: { racinglogo }
+    logo: { racinglogo },
   },
   {
-    name: 'Enterprise',
+    name: 'Trucks',
     id: 'tier-enterprise',
-    href: '#',
-    price: { monthly: '$48', annually: '$576' },
+    href: 'https://trucks.jonesco.autos',
     description: 'Dedicated support and infrastructure for your company.',
     features: [
       'Unlimited products',
@@ -54,7 +51,7 @@ const tiers = [
       'Custom reporting tools',
     ],
     mostPopular: false,
-    logo: { racinglogo }
+    logo: { racinglogo },
   },
 ]
 
@@ -66,11 +63,11 @@ export default function Example() {
   const [frequency, setFrequency] = useState(frequencies[0])
 
   return (
-    <div className="bg-gray-900">
-      <div className="mx-auto h-screen max-w-7xl px-6 lg:px-8">
+    <div className="h-screen bg-gradient-to-r from-red-500 via-green-500 to-blue-500">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="pt-24 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Jones Co.
+          <p className="pt-24 font-fugaz text-4xl font-bold tracking-tight text-white sm:text-7xl ">
+            JONES CO.
           </p>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
@@ -84,13 +81,14 @@ export default function Example() {
               className={classNames(
                 tier.mostPopular
                   ? 'bg-white/5 ring-2 ring-indigo-500'
-                  : 'ring-1 ring-white/10',
+                  : 'ring-2 ring-white',
                 'rounded-3xl p-8 xl:p-10'
               )}
             >
-                <div><Image src={tier.logo} alt="Logo" className="w-auto h-10"/></div>
+              <div>
+                <Image src={tier.logo} alt="Logo" className="h-10 w-auto" />
+              </div>
               <div className="flex items-center justify-between gap-x-4">
-                
                 <h3
                   id={tier.id}
                   className="text-lg font-semibold leading-8 text-white"
@@ -106,14 +104,6 @@ export default function Example() {
               <p className="mt-4 text-sm leading-6 text-gray-300">
                 {tier.description}
               </p>
-              <p className="mt-6 flex items-baseline gap-x-1">
-                <span className="text-4xl font-bold tracking-tight text-white">
-                  {tier.price[frequency.value]}
-                </span>
-                <span className="text-sm font-semibold leading-6 text-gray-300">
-                  {frequency.priceSuffix}
-                </span>
-              </p>
               <a
                 href={tier.href}
                 aria-describedby={tier.id}
@@ -124,7 +114,7 @@ export default function Example() {
                   'mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2'
                 )}
               >
-                Buy plan
+                Visit Site{' '}
               </a>
               <ul
                 role="list"
