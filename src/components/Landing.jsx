@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { RadioGroup } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/20/solid'
+import racinglogo from '../images/logos/racing.png'
 
 const frequencies = [
   { value: 'monthly', label: 'Monthly', priceSuffix: '/month' },
@@ -8,13 +8,14 @@ const frequencies = [
 ]
 const tiers = [
   {
-    name: 'Freelancer',
+    name: 'Racing',
     id: 'tier-freelancer',
     href: '#',
     price: { monthly: '$15', annually: '$144' },
     description: 'The essentials to provide your best work for clients.',
     features: ['5 products', 'Up to 1,000 subscribers', 'Basic analytics', '48-hour support response time'],
     mostPopular: false,
+    logo: {racinglogo}
   },
   {
     name: 'Startup',
@@ -29,7 +30,7 @@ const tiers = [
       '24-hour support response time',
       'Marketing automations',
     ],
-    mostPopular: true,
+    mostPopular: false,
   },
   {
     name: 'Enterprise',
@@ -57,37 +58,17 @@ export default function Example() {
   const [frequency, setFrequency] = useState(frequencies[0])
 
   return (
-    <div className="bg-gray-900 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="bg-gray-900">
+      <div className="mx-auto max-w-7xl h-screen px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-400">Pricing</h2>
-          <p className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Pricing plans for teams of&nbsp;all&nbsp;sizes
+          <p className="pt-24 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+           Jones Co.
           </p>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
-          Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer
-          loyalty, and driving sales.
+          Turn your vision into reality.
         </p>
         <div className="mt-16 flex justify-center">
-          <RadioGroup
-            value={frequency}
-            onChange={setFrequency}
-            className="grid grid-cols-2 gap-x-1 rounded-full bg-white/5 p-1 text-center text-xs font-semibold leading-5 text-white"
-          >
-            <RadioGroup.Label className="sr-only">Payment frequency</RadioGroup.Label>
-            {frequencies.map((option) => (
-              <RadioGroup.Option
-                key={option.value}
-                value={option}
-                className={({ checked }) =>
-                  classNames(checked ? 'bg-indigo-500' : '', 'cursor-pointer rounded-full py-1 px-2.5')
-                }
-              >
-                <span>{option.label}</span>
-              </RadioGroup.Option>
-            ))}
-          </RadioGroup>
         </div>
         <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {tiers.map((tier) => (
@@ -100,6 +81,7 @@ export default function Example() {
             >
               <div className="flex items-center justify-between gap-x-4">
                 <h3 id={tier.id} className="text-lg font-semibold leading-8 text-white">
+                <img src={tier.logo} alt="React Image" />
                   {tier.name}
                 </h3>
                 {tier.mostPopular ? (
