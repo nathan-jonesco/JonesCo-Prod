@@ -8,7 +8,7 @@ const category = [
     role: 'Co-Founder / CEO',
     imageUrl: '/../images/logos/racing.png',
     imageClass:
-      'relative flex place-content-center items-center space-x-3 rounded-3xl border border-red-600 bg-gradient-to-br from-gray-300 to-red-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2',
+      'relative flex place-content-center items-center space-x-3 rounded-3xl border border-red-600 bg-gradient-to-br from-gray-300 to-red-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-red-500 focus-within:ring-offset-2',
   },
   {
     name: 'Off-Road',
@@ -16,7 +16,7 @@ const category = [
     role: 'Co-Founder / CEO',
     imageUrl: '/../images/logos/offroad.png',
     imageClass:
-      'relative flex place-content-center items-center space-x-3 rounded-3xl border border-green-600 bg-gradient-to-br from-gray-300 to-green-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2',
+      'relative flex place-content-center items-center space-x-3 rounded-3xl border border-lime-600 bg-gradient-to-br from-gray-300 to-lime-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2',
   },
   {
     name: 'Trucks',
@@ -24,7 +24,7 @@ const category = [
     role: 'Co-Founder / CEO',
     imageUrl: '/../images/logos/trucks.png',
     imageClass:
-      'relative flex place-content-center items-center space-x-3 rounded-3xl border border-blue-600 bg-gradient-to-br from-gray-300 to-blue-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2',
+      'relative flex place-content-center items-center space-x-3 rounded-3xl border border-blue-600 bg-gradient-to-br from-gray-300 to-blue-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2',
   },
 ]
 
@@ -108,7 +108,7 @@ export default function Example() {
             {social.map((social) => (
               <div
                 key={social.link}
-                className="md:h-18 focus-within:ring-offset-6 relative flex h-16 place-content-center items-center space-x-3 rounded-2xl border border-gray-200 bg-gray-300 shadow-lg focus-within:ring-2 focus-within:ring-lime-500 hover:border-lime-400 lg:h-24"
+                className="md:h-18 focus-within:ring-offset-6 relative flex h-16 place-content-center items-center space-x-3 rounded-2xl border border-gray-200 bg-gray-200 shadow-lg focus-within:ring-2 lg:h-18"
               >
                 <a href={social.link}>
                   <div className="flex-shrink-0">
