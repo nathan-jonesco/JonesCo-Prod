@@ -28,7 +28,7 @@ const category = [
     link: 'mailto:hey@jonesco.autos',
     imageUrl: '/../images/logos/mail.svg',
     imageClass:
-      'p-8 sm:invisible visible relative flex place-content-center items-center space-x-3 rounded-3xl border border-yellow-600 bg-gradient-to-br from-gray-300 to-yellow-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-yellow-500 focus-within:ring-offset-2',
+      'p-8 sm:invisible visible relative flex place-content-center items-center space-x-3 rounded-3xl border border-gray-600 bg-gradient-to-br from-gray-200 to-gray-400 p-2 shadow-sm focus-within:ring-2 focus-within:ring-gray-500 focus-within:ring-offset-2',
   },
 ]
 
