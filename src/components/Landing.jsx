@@ -5,7 +5,6 @@ const category = [
   {
     name: 'Racing',
     link: 'https://racing.jonesco.autos',
-    role: 'Co-Founder / CEO',
     imageUrl: '/../images/logos/racing.png',
     imageClass:
       'relative flex place-content-center items-center space-x-3 rounded-3xl border border-red-600 bg-gradient-to-br from-gray-300 to-red-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-red-500 focus-within:ring-offset-2',
@@ -13,7 +12,6 @@ const category = [
   {
     name: 'Off-Road',
     link: 'https://offroad.jonesco.autos',
-    role: 'Co-Founder / CEO',
     imageUrl: '/../images/logos/offroad.png',
     imageClass:
       'relative flex place-content-center items-center space-x-3 rounded-3xl border border-lime-600 bg-gradient-to-br from-gray-300 to-lime-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2',
@@ -21,10 +19,16 @@ const category = [
   {
     name: 'Trucks',
     link: 'https://trucks.jonesco.autos',
-    role: 'Co-Founder / CEO',
     imageUrl: '/../images/logos/trucks.png',
     imageClass:
       'relative flex place-content-center items-center space-x-3 rounded-3xl border border-blue-600 bg-gradient-to-br from-gray-300 to-blue-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2',
+  },
+  {
+    name: 'Email',
+    link: 'mailto:hey@jonesco.autos',
+    imageUrl: '/../images/logos/at-sign.svg',
+    imageClass:
+      'sm:invisible visible relative flex place-content-center items-center space-x-3 rounded-3xl border border-yellow-600 bg-gradient-to-br from-gray-300 to-yellow-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-yellow-500 focus-within:ring-offset-2',
   },
 ]
 
