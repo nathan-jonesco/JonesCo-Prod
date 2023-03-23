@@ -85,7 +85,7 @@ export default function Example() {
               AUTOMOTIVE
             </h2>
           </div>
-          <div className="grid grid-cols-2 gap-4 px-4 sm:grid-cols-3 sm:px-32">
+          <div className="grid grid-cols-2 gap-4 px-4 sm:grid-cols-3  sm:px-16 md:px-32 lg:px-52 xl:px-64">
             {category.map((category) => (
               <div
                 key={category.link}
@@ -99,16 +99,16 @@ export default function Example() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-4 place-content-center items-center gap-2 px-2 md:grid-cols-8 sm:px-32">
+          <div className="grid grid-cols-4 place-content-center items-center gap-2 px-2 md:grid-cols-8 sm:px-16 md:px-32 lg:px-52 xl:px-64">
             {social.map((social) => (
               <div
                 key={social.link}
-                className="h-16 md:h-16 lg:h-24 relative flex place-content-center items-center space-x-3 rounded-2xl border border-gray-200 bg-gray-300 shadow-lg focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-6 hover:border-lime-400"
+                className="h-16 md:h-18 lg:h-24 relative flex place-content-center items-center space-x-3 rounded-2xl border border-gray-200 bg-gray-300 shadow-lg focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-6 hover:border-lime-400"
               >
                 <a href={social.link}>
                   <div className="flex-shrink-0">
                     <img
-                      className="md:h-12 lg:h-16 w-auto py-2"
+                      className="md:h-14 lg:h-16 w-auto py-2"
                       src={social.imageUrl}
                       alt=""
                     />
