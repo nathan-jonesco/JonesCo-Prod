@@ -63,48 +63,56 @@ const social = [
 export default function Example() {
   return (
     <div className="">
-      <video autoPlay loop muted
-        src='/../videos/drift.mp4'
-        className="absolute -z-10 min-h-full w-auto min-w-full max-w-none"
-      ></video>
-             <div className="absolute -z-10 min-h-full w-auto min-w-full max-w-none bg-gray-900 opacity-80"></div>
-
-      <div className="grid grid-cols-1 place-content-center gap-6 sm:h-screen z-auto">
-        <div className="">
-          <h1 className="text-white text-center font-fugaz text-3xl sm:text-6xl">
-            JONES CO.
-          </h1>
-          <h2 className="text-gray-300 -mt-1 text-center font-fugaz text-xl sm:text-3xl">
-            AUTOMOTIVE
-          </h2>
-        </div>
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:px-48">
-          {category.map((category) => (
-            <div
-              key={category.link}
-              className="relative flex place-content-center items-center space-x-3 rounded-lg border border-gray-300 bg-gray-100 p-2 shadow-sm focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2 hover:border-gray-400"
-            >
-              <a href={category.link}>
-                <div className="flex-shrink-0">
-                  <img className="h-auto w-48" src={category.imageUrl} alt="" />
-                </div>
-              </a>
-            </div>
-          ))}
-        </div>
-        <div className="grid grid-cols-3 place-content-center items-center gap-4 sm:grid-cols-7 sm:px-48">
-          {social.map((social) => (
-            <div
-              key={social.link}
-              className="relative flex place-content-center items-center space-x-3 rounded-lg border border-gray-300 bg-gray-300 p-4 shadow-sm focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2 hover:border-gray-400 sm:px-6 sm:py-5"
-            >
-              <a href={social.link}>
-                <div className="flex-shrink-0">
-                  <img className="h-auto w-full" src={social.imageUrl} alt="" />
-                </div>
-              </a>
-            </div>
-          ))}
+      <div className="max-w-none place-content-center items-center">
+        <div className="z-auto grid grid-cols-1 place-content-center gap-6 sm:h-screen  ">
+          <video
+            autoPlay
+            loop
+            muted
+            src="/../videos/drift.mp4"
+            className="absolute -z-10 min-h-full w-auto min-w-full max-w-none"
+          ></video>
+          <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gradient-to-r from-red-500 via-green-500 to-blue-500 opacity-50"></div>
+          <div className="">
+            <h1 className="pt-8 text-center font-fugaz text-3xl text-white sm:text-6xl">
+              JONES CO.
+            </h1>
+            <h2 className="-mt-1 text-center font-fugaz text-xl text-gray-300 sm:text-3xl">
+              AUTOMOTIVE
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 gap-4 px-4 sm:grid-cols-3 sm:px-32">
+            {category.map((category) => (
+              <div
+                key={category.link}
+                className="relative flex place-content-center items-center space-x-3 rounded-xl border border-gray-300 bg-gray-100 p-2 shadow-sm focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2 hover:border-lime-400"
+              >
+                <a href={category.link}>
+                  <div className="flex-shrink-0">
+                    <img className="h-auto w-40 md:py-5" src={category.imageUrl} alt="" />
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-4 place-content-center items-center gap-2 px-2 md:grid-cols-8 sm:px-32">
+            {social.map((social) => (
+              <div
+                key={social.link}
+                className="md:h-12 lg:h-24 relative flex place-content-center items-center space-x-3 rounded-2xl border border-gray-200 bg-gray-300 shadow-lg focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-6 hover:border-lime-400"
+              >
+                <a href={social.link}>
+                  <div className="flex-shrink-0">
+                    <img
+                      className="md:h-12 lg:h-16 w-auto py-2"
+                      src={social.imageUrl}
+                      alt=""
+                    />
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
