@@ -7,18 +7,21 @@ const category = [
     link: 'https://racing.jonesco.autos',
     role: 'Co-Founder / CEO',
     imageUrl: '/../images/logos/racing.png',
+    imageClass: "relative flex place-content-center items-center space-x-3 rounded-3xl border border-red-600 bg-gradient-to-br from-gray-300 to-red-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2"
   },
   {
     name: 'Off-Road',
     link: 'https://offroad.jonesco.autos',
     role: 'Co-Founder / CEO',
     imageUrl: '/../images/logos/offroad.png',
+    imageClass: 'relative flex place-content-center items-center space-x-3 rounded-3xl border border-green-600 bg-gradient-to-br from-gray-300 to-green-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2'
   },
   {
     name: 'Trucks',
     link: 'https://trucks.jonesco.autos',
     role: 'Co-Founder / CEO',
     imageUrl: '/../images/logos/trucks.png',
+    imageClass: 'relative flex place-content-center items-center space-x-3 rounded-3xl border border-blue-600 bg-gradient-to-br from-gray-300 to-blue-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2'
   },
 ]
 
@@ -27,6 +30,7 @@ const social = [
     name: 'Facebook',
     link: 'https://www.facebook.com/jonesco.autos',
     imageUrl: '/../images/logos/facebook.svg',
+
   },
   {
     name: 'YouTube',
@@ -72,7 +76,7 @@ export default function Example() {
             src="/../videos/drift.mp4"
             className="absolute -z-10 min-h-full w-auto min-w-full max-w-none"
           ></video>
-          <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gradient-to-r from-red-500 via-green-500 to-blue-500 opacity-50"></div>
+          <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gradient-to-t from-gray-500 to-gray-900 opacity-70"></div>
           <div className="">
             <h1 className="pt-8 text-center font-fugaz text-3xl text-white sm:text-6xl">
               JONES CO.
@@ -85,7 +89,7 @@ export default function Example() {
             {category.map((category) => (
               <div
                 key={category.link}
-                className="relative flex place-content-center items-center space-x-3 rounded-xl border border-gray-300 bg-gray-100 p-2 shadow-sm focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2 hover:border-lime-400"
+                className={category.imageClass}
               >
                 <a href={category.link}>
                   <div className="flex-shrink-0">
@@ -99,7 +103,7 @@ export default function Example() {
             {social.map((social) => (
               <div
                 key={social.link}
-                className="md:h-12 lg:h-24 relative flex place-content-center items-center space-x-3 rounded-2xl border border-gray-200 bg-gray-300 shadow-lg focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-6 hover:border-lime-400"
+                className="h-16 md:h-16 lg:h-24 relative flex place-content-center items-center space-x-3 rounded-2xl border border-gray-200 bg-gray-300 shadow-lg focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-6 hover:border-lime-400"
               >
                 <a href={social.link}>
                   <div className="flex-shrink-0">
