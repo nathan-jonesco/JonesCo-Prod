@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { useState } from 'react'
 import { CheckIcon } from '@heroicons/react/20/solid'
 import racinglogo from '../images/logos/racing.png'
@@ -13,9 +14,14 @@ const tiers = [
     href: '#',
     price: { monthly: '$15', annually: '$144' },
     description: 'The essentials to provide your best work for clients.',
-    features: ['5 products', 'Up to 1,000 subscribers', 'Basic analytics', '48-hour support response time'],
+    features: [
+      '5 products',
+      'Up to 1,000 subscribers',
+      'Basic analytics',
+      '48-hour support response time',
+    ],
     mostPopular: false,
-    logo: '../images/logos/racing.png'
+    logo: { racinglogo },
   },
   {
     name: 'Startup',
@@ -31,6 +37,7 @@ const tiers = [
       'Marketing automations',
     ],
     mostPopular: false,
+    logo: { racinglogo }
   },
   {
     name: 'Enterprise',
@@ -47,6 +54,7 @@ const tiers = [
       'Custom reporting tools',
     ],
     mostPopular: false,
+    logo: { racinglogo }
   },
 ]
 
@@ -59,29 +67,34 @@ export default function Example() {
 
   return (
     <div className="bg-gray-900">
-      <div className="mx-auto max-w-7xl h-screen px-6 lg:px-8">
+      <div className="mx-auto h-screen max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <p className="pt-24 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-           Jones Co.
+            Jones Co.
           </p>
         </div>
         <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">
           Turn your vision into reality.
         </p>
-        <div className="mt-16 flex justify-center">
-        </div>
+        <div className="mt-16 flex justify-center"></div>
         <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {tiers.map((tier) => (
             <div
               key={tier.id}
               className={classNames(
-                tier.mostPopular ? 'bg-white/5 ring-2 ring-indigo-500' : 'ring-1 ring-white/10',
+                tier.mostPopular
+                  ? 'bg-white/5 ring-2 ring-indigo-500'
+                  : 'ring-1 ring-white/10',
                 'rounded-3xl p-8 xl:p-10'
               )}
             >
+                <div><Image src={tier.logo} alt="Logo" className="w-auto h-10"/></div>
               <div className="flex items-center justify-between gap-x-4">
-                <h3 id={tier.id} className="text-lg font-semibold leading-8 text-white">
-                <img src={tier.logo} alt="Logo" />
+                
+                <h3
+                  id={tier.id}
+                  className="text-lg font-semibold leading-8 text-white"
+                >
                   {tier.name}
                 </h3>
                 {tier.mostPopular ? (
@@ -90,10 +103,16 @@ export default function Example() {
                   </p>
                 ) : null}
               </div>
-              <p className="mt-4 text-sm leading-6 text-gray-300">{tier.description}</p>
+              <p className="mt-4 text-sm leading-6 text-gray-300">
+                {tier.description}
+              </p>
               <p className="mt-6 flex items-baseline gap-x-1">
-                <span className="text-4xl font-bold tracking-tight text-white">{tier.price[frequency.value]}</span>
-                <span className="text-sm font-semibold leading-6 text-gray-300">{frequency.priceSuffix}</span>
+                <span className="text-4xl font-bold tracking-tight text-white">
+                  {tier.price[frequency.value]}
+                </span>
+                <span className="text-sm font-semibold leading-6 text-gray-300">
+                  {frequency.priceSuffix}
+                </span>
               </p>
               <a
                 href={tier.href}
@@ -107,10 +126,16 @@ export default function Example() {
               >
                 Buy plan
               </a>
-              <ul role="list" className="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
+              <ul
+                role="list"
+                className="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10"
+              >
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex gap-x-3">
-                    <CheckIcon className="h-6 w-5 flex-none text-white" aria-hidden="true" />
+                    <CheckIcon
+                      className="h-6 w-5 flex-none text-white"
+                      aria-hidden="true"
+                    />
                     {feature}
                   </li>
                 ))}
