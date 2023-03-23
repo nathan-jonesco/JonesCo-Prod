@@ -62,7 +62,12 @@ const social = [
   {
     name: 'TikTok',
     link: 'https://www.tiktok.com/@jonescoautos',
-    imageUrl: '/../images/logos/facebook.svg',
+    imageUrl: '/../images/logos/tiktok.svg',
+  },
+  {
+    name: 'Reddit',
+    link: 'https://www.reddit.com/user/Jones-Co',
+    imageUrl: '/../images/logos/reddit.svg',
   },
 ]
 
@@ -104,7 +109,7 @@ export default function Example() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-4 place-content-center items-center gap-2 px-2 sm:px-16 md:grid-cols-8 md:px-32 lg:px-52 xl:px-64">
+          <div className="grid grid-cols-4 place-content-center items-center gap-2 px-4 md:grid-cols-8  sm:px-16 md:px-32 lg:px-52 xl:px-64">
             {social.map((social) => (
               <div
                 key={social.link}
