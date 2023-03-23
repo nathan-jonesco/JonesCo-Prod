@@ -15,7 +15,7 @@ const tiers = [
     description: 'The essentials to provide your best work for clients.',
     features: ['5 products', 'Up to 1,000 subscribers', 'Basic analytics', '48-hour support response time'],
     mostPopular: false,
-    logo: {racinglogo}
+    logo: '../images/logos/racing.png'
   },
   {
     name: 'Startup',
@@ -81,7 +81,7 @@ export default function Example() {
             >
               <div className="flex items-center justify-between gap-x-4">
                 <h3 id={tier.id} className="text-lg font-semibold leading-8 text-white">
-                <img src={tier.logo} alt="React Image" />
+                <img src={tier.logo} alt="Logo" />
                   {tier.name}
                 </h3>
                 {tier.mostPopular ? (
