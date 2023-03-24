@@ -135,11 +135,11 @@ export default function Example() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-4 place-content-center items-center gap-2 px-2 sm:px-16  md:grid-cols-8  md:gap-4 md:px-32 lg:px-52 xl:px-96">
+          <div className="grid grid-cols-4 place-content-center items-center gap-2 px-6 sm:px-16  md:grid-cols-8  md:gap-4 md:px-32 lg:px-52 xl:px-96">
             {social.map((social) => (
               <div
                 key={social.link}
-                className="lg:h-20 focus-within:ring-offset-6 relative flex place-content-center items-center space-x-3 rounded-4xl border border-gray-200 bg-gradient-to-bl from-gray-100 to-gray-400 opacity-90 shadow-lg focus-within:ring-2"
+                className="lg:h-20 focus-within:ring-offset-6 relative flex place-content-center items-center space-x-3 rounded-2xl border border-gray-200 bg-gradient-to-bl from-gray-100 to-gray-400 opacity-90 shadow-lg focus-within:ring-2"
               >
                 <a href={social.link}>
                   <div className="flex-shrink-0">
