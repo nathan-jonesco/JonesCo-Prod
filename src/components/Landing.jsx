@@ -97,8 +97,11 @@ export default function Example() {
             <h2 className="-mt-1 text-center font-fugaz text-xl text-gray-300 sm:text-3xl">
               AUTOMOTIVE
             </h2>
+            <p className="m-4 text-center text-md text-gray-300 sm:text-xl">
+              Where your vision, is our passion.
+            </p>
           </div>
-          <div className="grid grid-cols-2 gap-4 px-4 sm:grid-cols-3  sm:px-16 md:px-32 lg:px-52 xl:px-64">
+          <div className="grid grid-cols-2 gap-4 px-4 sm:grid-cols-3  sm:px-16 md:px-32 lg:px-52 xl:px-80">
             {category.map((category) => (
               <div key={category.link} className={category.imageClass}>
                 <a href={category.link}>
@@ -113,11 +116,11 @@ export default function Example() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-4 place-content-center items-center gap-2 px-4 md:grid-cols-8  sm:px-16 md:px-32 lg:px-52 xl:px-64">
+          <div className="grid grid-cols-4 place-content-center items-center gap-2 px-4 md:grid-cols-8  sm:px-16 md:px-32 lg:px-52 xl:px-80">
             {social.map((social) => (
               <div
                 key={social.link}
-                className="md:h-18 focus-within:ring-offset-6 relative flex h-16 place-content-center items-center space-x-3 rounded-2xl border border-gray-200 bg-gray-200 shadow-lg focus-within:ring-2 lg:h-18"
+                className="bg-gradient-to-bl from-gray-100 to-gray-400 opacity-90 md:h-18 focus-within:ring-offset-6 relative flex h-16 place-content-center items-center space-x-3 rounded-2xl border border-gray-200 shadow-lg focus-within:ring-2 lg:h-18"
               >
                 <a href={social.link}>
                   <div className="flex-shrink-0">
