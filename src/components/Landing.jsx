@@ -7,21 +7,21 @@ const category = [
     link: 'https://racing.jonesco.autos',
     imageUrl: '/../images/logos/racing.png',
     imageClass:
-      'relative flex place-content-center items-center space-x-3 rounded-3xl border border-red-600 bg-gradient-to-br from-gray-300 to-red-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-red-500 focus-within:ring-offset-2',
+      'relative flex place-content-center items-center space-x-3 rounded-3xl border border-racing-red-600 bg-gradient-to-br from-gray-300 to-racing-red-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-racing-red-500 focus-within:ring-offset-2',
   },
   {
     name: 'Off-Road',
     link: 'https://offroad.jonesco.autos',
     imageUrl: '/../images/logos/offroad.png',
     imageClass:
-      'relative flex place-content-center items-center space-x-3 rounded-3xl border border-lime-600 bg-gradient-to-br from-gray-300 to-lime-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-lime-500 focus-within:ring-offset-2',
+      'relative flex place-content-center items-center space-x-3 rounded-3xl border border-offroad-yellow-600 bg-gradient-to-br from-gray-300 to-offroad-yellow-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-offroad-yellow-500 focus-within:ring-offset-2',
   },
   {
     name: 'Trucks',
     link: 'https://trucks.jonesco.autos',
     imageUrl: '/../images/logos/trucks.png',
     imageClass:
-      'relative flex place-content-center items-center space-x-3 rounded-3xl border border-blue-600 bg-gradient-to-br from-gray-300 to-blue-500 p-2 shadow-sm focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2',
+      'relative flex place-content-center items-center space-x-3 rounded-3xl border border-trucks-blue-600 bg-gradient-to-br from-gray-300 to-trucks-blue-800 p-2 shadow-sm focus-within:ring-2 focus-within:ring-trucks-blue-500 focus-within:ring-offset-2',
   },
   {
     name: 'Email',
@@ -89,16 +89,16 @@ export default function Example() {
       </div>
       <div className="max-w-none place-content-center items-center">
         <div className="z-auto grid grid-cols-1 place-content-center gap-6 sm:h-screen  ">
-          <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gradient-to-t from-gray-500 to-gray-900 opacity-90"></div>
+          <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gradient-to-t from-gray-700 to-gray-900 opacity-90"></div>
           <div className="">
-            <h1 className="text-white pt-8 text-center font-fugaz text-3xl sm:text-6xl md:text-9xl">
+            <h1 className="text-gray-50 pt-8 text-center font-fugaz text-3xl sm:text-6xl md:text-9xl">
               JONES CO.
             </h1>
             <h2 className="-mt-1 text-center font-fugaz text-xl text-gray-300 sm:text-3xl md:text-5xl">
               
             </h2>
-            <p className="mb-8 text-center text-md text-gray-300 sm:text-xl">
-              Where your vision, is our passion. 💯
+            <p className="mb-8 text-center text-md text-gray-300 sm:text-2xl">
+              Your vision, is our passion. 💯
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4 px-4 sm:grid-cols-3  sm:px-16 md:px-32 lg:px-52 xl:px-80">
