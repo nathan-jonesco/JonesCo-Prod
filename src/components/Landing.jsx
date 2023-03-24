@@ -91,7 +91,7 @@ export default function Example() {
         <div className="z-auto grid grid-cols-1 place-content-center gap-6 sm:h-screen  ">
           <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gradient-to-t from-gray-700 to-gray-900 opacity-90"></div>
           <div className="">
-            <h1 className="text-gray-50 pt-8 text-center font-fugaz text-3xl sm:text-6xl md:text-9xl">
+            <h1 className="text-gray-50 pt-14 sm:pt-8 text-center font-fugaz text-4xl sm:text-6xl md:text-9xl">
               JONES CO.
             </h1>
             <h2 className="-mt-1 text-center font-fugaz text-xl text-gray-300 sm:text-3xl md:text-5xl">
