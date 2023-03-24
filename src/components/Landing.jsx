@@ -91,14 +91,14 @@ export default function Example() {
         <div className="z-auto grid grid-cols-1 place-content-center gap-6 sm:h-screen  ">
           <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gradient-to-t from-gray-500 to-gray-900 opacity-90"></div>
           <div className="">
-            <h1 className="pt-8 text-center font-fugaz text-3xl text-white sm:text-6xl md:text-8xl">
+            <h1 className="text-white pt-8 text-center font-fugaz text-3xl sm:text-6xl md:text-9xl">
               JONES CO.
             </h1>
-            <h2 className="-mt-1 text-center font-fugaz text-xl text-gray-300 sm:text-3xl">
-              AUTOMOTIVE
+            <h2 className="-mt-1 text-center font-fugaz text-xl text-gray-300 sm:text-3xl md:text-5xl">
+              
             </h2>
-            <p className="m-4 text-center text-md text-gray-300 sm:text-xl">
-              Where your vision, is our passion.
+            <p className="mb-8 text-center text-md text-gray-300 sm:text-xl">
+              Where your vision, is our passion. 💯
             </p>
           </div>
           <div className="grid grid-cols-2 gap-4 px-4 sm:grid-cols-3  sm:px-16 md:px-32 lg:px-52 xl:px-80">
