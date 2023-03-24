@@ -23,13 +23,6 @@ const category = [
     imageClass:
       'relative flex place-content-center items-center space-x-3 rounded-3xl border border-trucks-blue-600 bg-gradient-to-br from-gray-300 to-trucks-blue-800 p-2 shadow-sm focus-within:ring-2 focus-within:ring-trucks-blue-500 focus-within:ring-offset-2',
   },
-  {
-    name: 'Email',
-    link: 'mailto:hey@jonesco.autos',
-    imageUrl: '/../images/logos/mail.svg',
-    imageClass:
-      'p-8 sm:invisible sm:absolute visible relative flex place-content-center items-center space-x-3 rounded-3xl border border-gray-600 bg-gradient-to-br from-gray-200 to-gray-400 p-2 shadow-sm focus-within:ring-2 focus-within:ring-gray-500 focus-within:ring-offset-2',
-  },
 ]
 
 const social = [
@@ -91,17 +84,15 @@ export default function Example() {
         <div className="z-auto grid grid-cols-1 place-content-center gap-6 sm:h-screen  ">
           <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gradient-to-t from-gray-700 to-gray-900 opacity-90"></div>
           <div className="">
-            <h1 className="text-gray-50 pt-14 sm:pt-8 text-center font-fugaz text-4xl sm:text-6xl md:text-9xl">
+            <h1 className="pt-14 text-center font-fugaz text-4xl text-gray-50 sm:pt-8 sm:text-6xl md:text-9xl">
               JONES CO.
             </h1>
-            <h2 className="-mt-1 text-center font-fugaz text-xl text-gray-300 sm:text-3xl md:text-5xl">
-              
-            </h2>
-            <p className="mb-8 text-center text-md text-gray-300 sm:text-2xl">
+            <h2 className="-mt-1 text-center font-fugaz text-xl text-gray-300 sm:text-3xl md:text-5xl"></h2>
+            <p className="text-md mb-8 text-center text-gray-300 sm:text-2xl">
               Your vision, is our passion. 💯
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-4 px-4 sm:grid-cols-3  sm:px-16 md:px-32 lg:px-52 xl:px-80">
+          <div className="grid grid-cols-3 gap-2 px-2 sm:px-16  md:gap-4 md:px-32 lg:px-52 xl:px-80">
             {category.map((category) => (
               <div key={category.link} className={category.imageClass}>
                 <a href={category.link}>
@@ -116,11 +107,11 @@ export default function Example() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-4 place-content-center items-center gap-2 px-4 md:grid-cols-8  sm:px-16 md:px-32 lg:px-52 xl:px-80">
+          <div className="grid grid-cols-4 place-content-center items-center gap-2 px-2 sm:px-16  md:grid-cols-8  md:gap-4 md:px-32 lg:px-52 xl:px-80">
             {social.map((social) => (
               <div
                 key={social.link}
-                className="bg-gradient-to-bl from-gray-100 to-gray-400 opacity-90 md:h-18 focus-within:ring-offset-6 relative flex h-16 place-content-center items-center space-x-3 rounded-2xl border border-gray-200 shadow-lg focus-within:ring-2 lg:h-18"
+                className="md:h-18 focus-within:ring-offset-6 lg:h-18 relative flex h-16 place-content-center items-center space-x-3 rounded-2xl border border-gray-200 bg-gradient-to-bl from-gray-100 to-gray-400 opacity-90 shadow-lg focus-within:ring-2"
               >
                 <a href={social.link}>
                   <div className="flex-shrink-0">
