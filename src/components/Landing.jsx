@@ -108,7 +108,7 @@ export default function Example() {
 
       
       <div className="max-w-none place-content-center items-center">
-        <div className="z-auto grid grid-cols-1 place-content-center gap-6 sm:h-screen  ">
+        <div className="z-auto grid grid-cols-1 place-content-center gap-4 md:gap-6 sm:h-screen  ">
           <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gradient-to-t from-gray-700 to-gray-900 opacity-70"></div>
           <div className="">
             <h1 className="pt-32 text-center font-fugaz text-5xl text-gray-50 sm:pt-8 sm:text-6xl md:text-9xl">
@@ -120,7 +120,7 @@ export default function Example() {
             </p>
           </div>
         
-          <div className="grid grid-cols-3 gap-2 px-2 sm:px-16  md:gap-4 md:px-32 lg:px-52 xl:px-80">
+          <div className="grid grid-cols-3 gap-2 px-4 sm:px-16  md:gap-4 md:px-32 lg:px-52 xl:px-80">
             {category.map((category) => (
               <div key={category.link} className={category.imageClass}>
                 <a href={category.link}>
