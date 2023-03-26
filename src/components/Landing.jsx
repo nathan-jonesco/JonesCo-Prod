@@ -100,7 +100,7 @@ export default function Example() {
           autoPlay
           loop
           muted
-          src="/../videos/drift.mp4"
+          src="/../videos/drift2.mp4"
           className="absolute -z-10 h-full w-auto min-w-full object-cover"
         ></video>
       </div>
@@ -109,14 +109,14 @@ export default function Example() {
       
       <div className="max-w-none place-content-center items-center">
         <div className="z-auto grid grid-cols-1 place-content-center gap-6 sm:h-screen  ">
-          <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gradient-to-t from-gray-700 to-gray-900 opacity-90"></div>
+          <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gradient-to-t from-gray-700 to-gray-900 opacity-70"></div>
           <div className="">
             <h1 className="pt-32 text-center font-fugaz text-5xl text-gray-50 sm:pt-8 sm:text-6xl md:text-9xl">
               JONES CO.
             </h1>
             <h2 className="-mt-1 text-center font-fugaz text-xl text-gray-300 sm:text-3xl md:text-5xl"></h2>
             <p className="text-md mb-14 mt-4 text-center text-gray-300 sm:text-3xl font-semibold">
-              Your vision, is our passion. 💯
+            Your car, your style, our specialty. 💯
             </p>
           </div>
         
