@@ -144,7 +144,7 @@ export default function Example() {
                 <a href={social.link}>
                   <div className="flex-shrink-0">
                     <img
-                      className="w-10 py-2 h-16 md:h-16"
+                      className="w-6 md:w-12 py-2"
                       src={social.imageUrl}
                       alt=""
                     />
