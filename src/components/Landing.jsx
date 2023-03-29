@@ -110,12 +110,12 @@ export default function Example() {
           loop
           muted
           src="/../videos/drift2.mp4"
-          className="absolute -z-10 h-full w-auto min-w-full object-cover"
+          className="absolute -z-10 h-full w-auto min-w-full object-cover opacity-50 sm:opacity-100"
         ></video>
       </div>
       <div className="max-w-none place-content-center items-center">
         <div className="z-auto grid grid-cols-1 place-content-center gap-4 sm:h-screen md:gap-6  ">
-          <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gray-50 sm:bg-gray-900 opacity-70"></div>
+          <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gradient-to-br from-racing-red-50 via-trucks-blue-50 to-offroad-yellow-50 sm:bg-gray-900 opacity-70"></div>
           <div className="">
             <h1 className="pt-32 text-center font-fugaz text-5xl sm:text-gray-50 sm:pt-0 sm:text-7xl">
               JONES CO.
@@ -126,7 +126,7 @@ export default function Example() {
             </p>
           </div>
           <div className="visible m-5 rounded-lg p-5 sm:hidden">
-            <nav className="justify-center space-y-4" aria-label="Sidebar">
+            <nav className="justify-center space-y-6" aria-label="Sidebar">
               {navigation.map((item) => (
                 <a
                   key={item.name}
@@ -134,7 +134,7 @@ export default function Example() {
                   className={classNames(
                     item.current
                       ? 'justify-center bg-trucks-blue-200 text-gray-900 text-lg'
-                      : 'font-bold justify-center text-2xl text-gray-900 hover:bg-gray-50 hover:text-gray-900',
+                      : 'font-bold justify-center text-3xl text-gray-900 hover:bg-gray-50 hover:text-gray-900',
                     'group flex rounded-xl px-3 py-2 text-sm font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
