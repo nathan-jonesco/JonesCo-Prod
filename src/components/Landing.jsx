@@ -116,17 +116,17 @@ export default function Example() {
             </h1>
             <h2 className="-mt-1 text-center font-fugaz text-xl text-gray-300 sm:text-3xl md:text-5xl"></h2>
             <p className="text-md mb-4 mt-1 text-center text-gray-300 sm:text-2xl font-semibold">
-            Your car, your style, our specialty.
+            Your performance specialists.
             </p>
           </div>
         
-          <div className="grid grid-cols-3 gap-2 px-4 sm:px-16  md:gap-4 md:px-32 lg:px-52 xl:px-80">
+          <div className="grid grid-cols-3 gap-2 px-4 sm:px-16  md:gap-4">
             {category.map((category) => (
               <div key={category.link} className={category.imageClass}>
                 <a href={category.link}>
                   <div className="flex-shrink-0">
                     <img
-                      className="h-auto w-40 lg:w-64 md:py-5"
+                      className=""
                       src={category.imageUrl}
                       alt=""
                     />
@@ -135,7 +135,7 @@ export default function Example() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-4 place-content-center items-center gap-2 px-6 sm:px-16  md:grid-cols-8  md:gap-4 md:px-32 lg:px-52 xl:px-96">
+          <div className="grid grid-cols-8 place-content-center items-center gap-2 px-6 sm:px-16  md:gap-4">
             {social.map((social) => (
               <div
                 key={social.link}
@@ -144,7 +144,7 @@ export default function Example() {
                 <a href={social.link}>
                   <div className="flex-shrink-0">
                     <img
-                      className="w-auto py-2 h-16 md:h-14 lg:h-16"
+                      className="w-10 py-2 h-16 md:h-16"
                       src={social.imageUrl}
                       alt=""
                     />
