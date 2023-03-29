@@ -139,7 +139,7 @@ export default function Example() {
             {social.map((social) => (
               <div
                 key={social.link}
-                className="lg:h-20 focus-within:ring-offset-6 relative flex place-content-center items-center space-x-3 rounded-2xl border border-gray-200 bg-gradient-to-bl from-gray-100 to-gray-400 opacity-90 shadow-lg focus-within:ring-2"
+                className="lg:h-20 focus-within:ring-offset-6 relative flex place-content-center items-center space-x-3 rounded-lg border border-gray-200 bg-gradient-to-bl from-gray-100 to-gray-400 opacity-90 shadow-lg focus-within:ring-2"
               >
                 <a href={social.link}>
                   <div className="flex-shrink-0">
