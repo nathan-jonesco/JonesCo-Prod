@@ -115,7 +115,7 @@ export default function Example() {
       </div>
       <div className="max-w-none place-content-center items-center">
         <div className="z-auto grid grid-cols-1 place-content-center gap-4 sm:h-screen md:gap-6  ">
-          <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gray-200 sm:bg-gray-900 opacity-70"></div>
+          <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gray-50 sm:bg-gray-900 opacity-70"></div>
           <div className="">
             <h1 className="pt-32 text-center font-fugaz text-5xl sm:text-gray-50 sm:pt-0 sm:text-7xl">
               JONES CO.
@@ -125,7 +125,7 @@ export default function Example() {
               Your performance specialists.
             </p>
           </div>
-          <div className="visible m-16 rounded-lg p-5 sm:hidden">
+          <div className="visible m-5 rounded-lg p-5 sm:hidden">
             <nav className="justify-center space-y-4" aria-label="Sidebar">
               {navigation.map((item) => (
                 <a
