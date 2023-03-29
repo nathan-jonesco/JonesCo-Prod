@@ -2,6 +2,8 @@ import Head from 'next/head'
 
 import Landing from '@/components/Landing'
 
+import mobile from '@/components/mobilelanding.jsx'
+
 
 
 export default function Home() {
@@ -16,6 +18,7 @@ export default function Home() {
       </Head>
       <main>
         <Landing />
+        <mobile />
       </main>
     </>
   )
