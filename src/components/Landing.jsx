@@ -19,7 +19,7 @@ import {
 
 const buildtype = [
   {
-    name: '🏁 Race Car Build',
+    name: '🏁 Race Build',
     description:
       'Need power adders, better reliability, performance suspension, or a whole rebuild? We can do it all.',
     icon: PhoneIcon,
@@ -322,9 +322,7 @@ export default function Example() {
                   AUTOMOTIVE
                 </h2>
                 <p className="text-md justify mt-6 leading-8 text-gray-100">
-                  We are a premier performance car and truck shop, offering
-                  high-quality modifications and customization at affordable
-                  prices. Whether you want to boost the power of your muscle
+                  Whether you want to boost the power of your muscle
                   car, toughen up your pickup truck, or create a one-of-a-kind
                   ride, our expert technicians have the experience and parts to
                   make it happen.
