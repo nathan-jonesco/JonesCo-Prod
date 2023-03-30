@@ -17,11 +17,11 @@ import {
   PhoneIcon,
 } from '@heroicons/react/20/solid'
 
-const cards = [
+const buildtype = [
   {
     name: '🏁 Race Car Build',
     description:
-      'Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur.',
+      'Need power adders, better reliability, performance suspension, or a whole rebuild? We can do it all.',
     icon: PhoneIcon,
     href: '/race-build',
     color: 'bg-racing-red-600 rounded-xl hover:animate-pulse',
@@ -29,7 +29,7 @@ const cards = [
   {
     name: '🏕️ Off-Road Build',
     description:
-      'Quod possimus sit modi rerum exercitationem quaerat atque tenetur ullam.',
+      'Need mud tires, lift kits, lights, or a whole build? We can make your vehicle ride like a dream, on and off road.',
     icon: LifebuoyIcon,
     href: '/offroad-build',
     color: 'bg-offroad-yellow-700 rounded-xl hover:animate-pulse',
@@ -37,7 +37,7 @@ const cards = [
   {
     name: '🤩 Show Truck Build',
     description:
-      'Ratione et porro eligendi est sed ratione rerum itaque. Placeat accusantium impedit eum odit.',
+      'Want bigger rims, louder exhaust, color matched parts, or a whole build? We can turn your truck into show quality.',
     icon: NewspaperIcon,
     href: '/truck-build',
     color: 'bg-trucks-blue-600 rounded-xl hover:animate-pulse',
@@ -334,7 +334,7 @@ export default function Example() {
                   of a kind build.
                 </p>
                 <div className="mx-auto mt-16 grid grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:grid-cols-3 lg:gap-8">
-                  {cards.map((card) => (
+                  {buildtype.map((card) => (
                     <div className={card.color} key={card.name}>
                       <div className=" flex gap-x-4  p-6 ring-1 ring-inset ring-gray-50/10">
                         <a href={card.href}>
