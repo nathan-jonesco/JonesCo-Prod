@@ -47,11 +47,14 @@ const category = [
 ]
 
 const navigation = [
-  { name: '🏁 Racing', href: 'https://racing.jonesco.autos', current: false },
-  { name: '🏔️ Off-Road', href: 'https://offroad.jonesco.autos', current: false },
-  { name: '🛻 Trucks', href: 'https://trucks.jonesco.autos', current: false },
-  { name: '💬 Contact', href: 'https://contact.jonesco.autos', current: false },
-  { name: '🤯 Blog', href: 'https://blog.jonesco.autos', current: false },
+  { name: '🏁 RACING', href: 'https://racing.jonesco.autos', current: false },
+  {
+    name: '🏔️ OFF ROAD',
+    href: 'https://offroad.jonesco.autos',
+    current: false,
+  },
+  { name: '🛻 TRUCKS', href: 'https://trucks.jonesco.autos', current: false },
+  { name: '🤯 BLOG', href: 'https://blog.jonesco.autos', current: false },
 ]
 
 const social = [
@@ -113,28 +116,31 @@ export default function Example() {
           className="absolute -z-10 h-full w-auto min-w-full object-cover opacity-50 sm:opacity-100"
         ></video>
       </div>
-      <div className="max-w-none place-content-center items-center">
+      <div className="max-w-none">
         <div className="z-auto grid grid-cols-1 place-content-center gap-4 sm:h-screen md:gap-6  ">
-          <div className="absolute -z-10 min-h-full  min-w-full max-w-none bg-gradient-to-br from-racing-red-50 via-trucks-blue-50 to-offroad-yellow-50 sm:bg-gray-900 opacity-70"></div>
+          <div className="sm:via-trucks-gray-700 sm:to-offroad-gray-600 absolute  -z-10 min-h-full min-w-full max-w-none bg-gradient-to-br from-racing-red-50 via-trucks-blue-50 to-offroad-yellow-50 opacity-70 sm:bg-gradient-to-br sm:from-gray-900"></div>
           <div className="">
-            <h1 className="pt-32 text-center font-fugaz text-5xl sm:text-gray-50 sm:pt-0 sm:text-7xl">
+            <h1 className="pt-32 text-center font-fugaz text-6xl sm:pt-0 sm:text-7xl sm:text-gray-100">
               JONES CO.
             </h1>
             <h2 className="-mt-1 text-center font-fugaz text-xl text-gray-300 sm:text-3xl md:text-5xl"></h2>
-            <p className="text-md mb-4 mt-1 text-center font-semibold sm:text-gray-300 sm:text-2xl">
-              Your performance specialists.
+            <p className="text-md mb-4 mt-1 text-center font-semibold sm:text-2xl sm:text-gray-50">
+              Your performance specialists
             </p>
           </div>
-          <div className="visible m-5 rounded-lg p-5 sm:hidden">
-            <nav className="justify-center space-y-6" aria-label="Sidebar">
+          <div className="visible m-5 rounded-md p-5 sm:hidden">
+            <nav
+              className="justify-center space-y-6 font-fugaz"
+              aria-label="Sidebar"
+            >
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   className={classNames(
                     item.current
-                      ? 'justify-center bg-trucks-blue-200 text-gray-900 text-lg'
-                      : 'font-bold justify-center text-3xl text-gray-900 hover:bg-gray-50 hover:text-gray-900',
+                      ? 'justify-center bg-trucks-blue-200 text-lg text-gray-900'
+                      : 'justify-center text-3xl font-bold text-gray-900 hover:bg-gray-50 hover:text-gray-900',
                     'group flex rounded-xl px-3 py-2 text-sm font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
@@ -144,35 +150,36 @@ export default function Example() {
               ))}
             </nav>
           </div>
-
-          <div className="invisible grid grid-cols-3 gap-2 px-4 sm:visible sm:px-16  md:gap-4">
-            {category.map((category) => (
-              <div key={category.link} className={category.imageClass}>
-                <a href={category.link}>
-                  <div className="flex-shrink-0">
-                    <img className="" src={category.imageUrl} alt="" />
-                  </div>
-                </a>
-              </div>
-            ))}
-          </div>
-          <div className="invisible grid grid-cols-8 place-content-center items-center gap-2 px-6 sm:visible sm:px-16  md:gap-4">
-            {social.map((social) => (
-              <div
-                key={social.link}
-                className="focus-within:ring-offset-6 relative flex place-content-center items-center space-x-3 rounded-lg border border-gray-200 bg-gradient-to-bl from-gray-100 to-gray-400 opacity-90 shadow-lg focus-within:ring-2 lg:h-20"
-              >
-                <a href={social.link}>
-                  <div className="flex-shrink-0">
-                    <img
-                      className="w-6 py-2 md:w-12"
-                      src={social.imageUrl}
-                      alt=""
-                    />
-                  </div>
-                </a>
-              </div>
-            ))}
+          <div className="md:px-24">
+            <div className="pb-6 invisible grid grid-cols-3 gap-2  sm:visible md:gap-4">
+              {category.map((category) => (
+                <div key={category.link} className={category.imageClass}>
+                  <a href={category.link}>
+                    <div className="flex-shrink-0">
+                      <img className="" src={category.imageUrl} alt="" />
+                    </div>
+                  </a>
+                </div>
+              ))}
+            </div>
+            <div className="invisible grid grid-cols-8 place-content-center items-center gap-2 px-6 sm:visible sm:px-16  md:gap-4">
+              {social.map((social) => (
+                <div
+                  key={social.link}
+                  className="focus-within:ring-offset-6 relative flex place-content-center items-center space-x-3 rounded-lg border border-gray-200 bg-gradient-to-bl from-gray-100 to-gray-400 opacity-90 shadow-lg focus-within:ring-2 lg:h-20"
+                >
+                  <a href={social.link}>
+                    <div className="flex-shrink-0">
+                      <img
+                        className="w-6 py-2 md:w-12"
+                        src={social.imageUrl}
+                        alt=""
+                      />
+                    </div>
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
