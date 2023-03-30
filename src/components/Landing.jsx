@@ -19,37 +19,61 @@ import {
 
 const cards = [
   {
-    name: 'Sales',
+    name: '🏁 Race Car Build',
     description:
       'Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur.',
     icon: PhoneIcon,
+    href: '/race-build',
+    color: 'bg-racing-red-600 rounded-xl',
   },
   {
-    name: 'Technical Support',
+    name: '🏕️ Off-Road Build',
     description:
       'Quod possimus sit modi rerum exercitationem quaerat atque tenetur ullam.',
     icon: LifebuoyIcon,
+    href: '/offroad-build',
+    color: 'bg-offroad-yellow-700 rounded-xl',
   },
   {
-    name: 'Media Inquiries',
+    name: '🤩 Show Truck Build',
     description:
       'Ratione et porro eligendi est sed ratione rerum itaque. Placeat accusantium impedit eum odit.',
     icon: NewspaperIcon,
+    href: '/truck-build',
+    color: 'bg-trucks-blue-600 rounded-xl',
   },
 ]
 
 const navigation = [
   { name: '🏡 Home', href: '/', icon: HomeIcon, current: true },
-  { name: '🏁 Racing', href: '/racing', icon: UsersIcon, current: false },
+  { name: '👋 About Us', href: '/about', icon: UsersIcon, current: false },
   {
-    name: '🏕️ Off-Roading',
-    href: '/offroad',
+    name: '🪄 Services',
+    href: '/services',
     icon: FolderIcon,
     current: false,
   },
   {
-    name: '🛻 Show Trucks',
-    href: '/trucks',
+    name: '🎁 Products',
+    href: '/products',
+    icon: CalendarIcon,
+    current: false,
+  },
+  {
+    name: '📷 Gallery',
+    href: '/gallery',
+    icon: CalendarIcon,
+    current: false,
+  },
+  {
+    name: '🤯 Blog',
+    href: 'https://blog.jonesco.autos/',
+    icon: CalendarIcon,
+    current: false,
+  },
+  {
+    name: '💬 Contact Us',
+    href: '/contact',
     icon: CalendarIcon,
     current: false,
   },
@@ -65,25 +89,6 @@ const social = [
   { id: 8, name: 'Pinterest', href: '#', initial: 'P', current: false },
 ]
 
-const posts = [
-  {
-    id: 1,
-    title: 'Boost your conversion rate',
-    href: '#',
-    description:
-      'Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3603&q=80',
-    date: 'Mar 16, 2020',
-    datetime: '2020-03-16',
-    author: {
-      name: 'Michael Foster',
-      imageUrl:
-        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-    },
-  },
-  // More posts...
-]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -156,7 +161,7 @@ export default function Example() {
                     </div>
                   </Transition.Child>
                   {/* Sidebar component, swap this element with another sidebar if you like */}
-                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-300 px-6 pb-2">
+                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-200 px-6 pb-2">
                     <div className="flex h-24 shrink-0 items-center">
                       <img
                         className="h-12 w-auto"
@@ -191,7 +196,7 @@ export default function Example() {
                         </li>
                         <li>
                           <div className="text-md font-fugaz leading-6 text-gray-900">
-                            Contact Us
+                            Social Media
                           </div>
                           <ul role="list" className="-mx-2 mt-2 space-y-1">
                             {social.map((socialitem) => (
@@ -202,7 +207,7 @@ export default function Example() {
                                     socialitem.current
                                       ? 'bg-gray-400 text-gray-900'
                                       : 'text-gray-900 hover:bg-gray-700 hover:text-gray-50',
-                                    'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6'
+                                    'group flex gap-x-3 rounded-md pl-2 text-sm font-semibold leading-6'
                                   )}
                                 >
                                   <span className="truncate">
@@ -236,6 +241,9 @@ export default function Example() {
             <nav className="flex flex-1 flex-col">
               <ul role="list" className="flex flex-1 flex-col gap-y-7">
                 <li>
+                <div className="font-fugaz text-lg leading-6 text-gray-900 pb-5">
+                    Web Pages
+                  </div>
                   <ul role="list" className="-mx-2 space-y-1">
                     {navigation.map((item) => (
                       <li key={item.name}>
@@ -256,7 +264,7 @@ export default function Example() {
                 </li>
                 <li>
                   <div className="font-fugaz text-lg leading-6 text-gray-900">
-                    Contact Us 👋
+                    Social Media
                   </div>
                   <ul role="list" className="-mx-2 mt-4 space-y-1">
                     {social.map((socialitem) => (
@@ -267,7 +275,7 @@ export default function Example() {
                             socialitem.current
                               ? 'bg-gray-300 text-gray-900'
                               : 'text-gray-900 hover:bg-gray-300 hover:text-gray-50',
-                            'group flex gap-x-3 rounded-md p-2 text-sm leading-6'
+                            'group flex gap-x-3 rounded-md pl-2 text-sm leading-6'
                           )}
                         >
                           <span className="truncate">{socialitem.name}</span>
@@ -306,48 +314,50 @@ export default function Example() {
               className="absolute inset-0 -z-10 h-full w-full object-cover object-right opacity-50 md:object-center"
             />
 
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
-              <div className="mx-auto max-w-2xl  px-3">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8 h-full">
+              <div className="mx-auto max-w-4xl  px-3">
                 <h2 className="text-center font-fugaz text-5xl tracking-tight text-gray-50 sm:text-7xl">
                   JONES CO.
                 </h2>
-                <h2 className="text-center font-bold text-xl tracking-widest text-racing-red-50 sm:text-7xl">
+                <h2 className="text-center text-xl font-bold tracking-widest text-gray-200 sm:text-3xl pb-2 md:pb-10">
                   AUTOMOTIVE
                 </h2>
-                <p className="mt-6 text-md leading-8 text-gray-100">
-                  We a premier performance car and truck shop, offering
+                <p className="invisible sm:visible  text-md mt-6 leading-8 text-gray-100 justify">
+                  We are a premier performance car and truck shop, offering
                   high-quality modifications and customization at affordable
                   prices.
+
+                  Whether you want to boost the power of your muscle car,
+                  toughen up your pickup truck, or create a one-of-a-kind ride,
+                  our expert technicians have the experience and parts to make
+                  it happen. 
                 </p>
-                <p className="mt-6 text-md leading-8 text-gray-100">
-                 Whether you want to boost the power of your muscle
-                  car, toughen up your pickup truck, or create a one-of-a-kind
-                  ride, our expert technicians have the experience and parts to
-                  make it happen.
+                <p className="text-md mt-6 font-bold leading-8 text-gray-100">
+                 Select your modification category below to start your new one
+                  of a kind build.
                 </p>
-              </div>
-              <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+                <div className="mx-auto mt-16 grid grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:grid-cols-3 lg:gap-8">
                 {cards.map((card) => (
+                  <div className={card.color}>
                   <div
                     key={card.name}
-                    className="flex gap-x-4 rounded-xl bg-gray-50/5 p-6 ring-1 ring-inset ring-gray-50/10"
+                    className=" flex gap-x-4  p-6 ring-1 ring-inset ring-gray-50/10"
                   >
-                    <card.icon
-                      className="h-7 w-5 flex-none text-gray-400"
-                      aria-hidden="true"
-                    />
-                    <div className="text-base leading-7">
-                      <h3 className="font-semibold text-gray-50">
-                        {card.name}
-                      </h3>
-                      <p className="mt-2 text-gray-300">{card.description}</p>
-                    </div>
+                    <a href={card.href}>
+                      <div className="text-base leading-7">
+                        <h3 className="font-fugaz text-xl text-gray-50">
+                          {card.name}
+                        </h3>
+                        <p className="mt-2 text-gray-50">{card.description}</p>
+                      </div>
+                    </a></div>
                   </div>
                 ))}
               </div>
+              </div>
+
             </div>
           </div>
-
         </main>
       </div>
     </>
