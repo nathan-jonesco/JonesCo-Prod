@@ -276,7 +276,7 @@ export default function Example() {
         <div className="mx-auto max-w-2xl  px-6">
           <h2 className="text-6xl text-center font-fugaz tracking-tight text-gray-50 sm:text-7xl">JONES CO.</h2>
           <p className="mt-6 text-lg leading-8 text-gray-100">
-          We are TN's premier performance car and truck shop, offering high-quality modifications and customization at affordable prices.  Whether you want to boost the power of your muscle car, toughen up your pickup truck, or create a one-of-a-kind ride, our expert technicians have the experience and parts to make it happen.
+          We are TNs premier performance car and truck shop, offering high-quality modifications and customization at affordable prices.  Whether you want to boost the power of your muscle car, toughen up your pickup truck, or create a one-of-a-kind ride, our expert technicians have the experience and parts to make it happen.
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
