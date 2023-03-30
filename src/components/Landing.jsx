@@ -321,7 +321,7 @@ export default function Example() {
                 <h2 className="pb-2 text-center text-xl font-bold tracking-widest text-gray-200 sm:text-3xl md:pb-10">
                   AUTOMOTIVE
                 </h2>
-                <p className="text-md justify  invisible mt-6 leading-8 text-gray-100 sm:visible">
+                <p className="text-md justify mt-6 leading-8 text-gray-100">
                   We are a premier performance car and truck shop, offering
                   high-quality modifications and customization at affordable
                   prices. Whether you want to boost the power of your muscle
