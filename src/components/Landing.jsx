@@ -11,33 +11,48 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 
-
-import { LifebuoyIcon, NewspaperIcon, PhoneIcon } from '@heroicons/react/20/solid'
+import {
+  LifebuoyIcon,
+  NewspaperIcon,
+  PhoneIcon,
+} from '@heroicons/react/20/solid'
 
 const cards = [
   {
     name: 'Sales',
-    description: 'Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur.',
+    description:
+      'Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur.',
     icon: PhoneIcon,
   },
   {
     name: 'Technical Support',
-    description: 'Quod possimus sit modi rerum exercitationem quaerat atque tenetur ullam.',
+    description:
+      'Quod possimus sit modi rerum exercitationem quaerat atque tenetur ullam.',
     icon: LifebuoyIcon,
   },
   {
     name: 'Media Inquiries',
-    description: 'Ratione et porro eligendi est sed ratione rerum itaque. Placeat accusantium impedit eum odit.',
+    description:
+      'Ratione et porro eligendi est sed ratione rerum itaque. Placeat accusantium impedit eum odit.',
     icon: NewspaperIcon,
   },
 ]
 
-
 const navigation = [
   { name: '🏡 Home', href: '/', icon: HomeIcon, current: true },
   { name: '🏁 Racing', href: '/racing', icon: UsersIcon, current: false },
-  { name: '🏕️ Off-Roading', href: '/offroad', icon: FolderIcon, current: false },
-  { name: '🛻 Show Trucks', href: '/trucks', icon: CalendarIcon, current: false },
+  {
+    name: '🏕️ Off-Roading',
+    href: '/offroad',
+    icon: FolderIcon,
+    current: false,
+  },
+  {
+    name: '🛻 Show Trucks',
+    href: '/trucks',
+    icon: CalendarIcon,
+    current: false,
+  },
 ]
 const social = [
   { id: 1, name: 'Instagram', href: '#', initial: 'I', current: false },
@@ -89,7 +104,11 @@ export default function Example() {
       */}
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
-          <Dialog as="div" className="relative z-50 lg:hidden" onClose={setSidebarOpen}>
+          <Dialog
+            as="div"
+            className="relative z-50 lg:hidden"
+            onClose={setSidebarOpen}
+          >
             <Transition.Child
               as={Fragment}
               enter="transition-opacity ease-linear duration-300"
@@ -123,22 +142,33 @@ export default function Example() {
                     leaveTo="opacity-0"
                   >
                     <div className="absolute left-full top-0 flex w-16 justify-center pt-5">
-                      <button type="button" className="-m-2.5 p-2.5" onClick={() => setSidebarOpen(false)}>
+                      <button
+                        type="button"
+                        className="-m-2.5 p-2.5"
+                        onClick={() => setSidebarOpen(false)}
+                      >
                         <span className="sr-only">Close sidebar</span>
-                        <XMarkIcon className="h-6 w-6 text-gray-50" aria-hidden="true" />
+                        <XMarkIcon
+                          className="h-6 w-6 text-gray-50"
+                          aria-hidden="true"
+                        />
                       </button>
                     </div>
                   </Transition.Child>
                   {/* Sidebar component, swap this element with another sidebar if you like */}
-                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-600 px-6 pb-2">
+                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-300 px-6 pb-2">
                     <div className="flex h-24 shrink-0 items-center">
                       <img
                         className="h-12 w-auto"
-                        src='/../images/logos/Official.png'
+                        src="/../images/logos/Official.png"
                         alt="Your Company"
                       />
                     </div>
                     <nav className="flex flex-1 flex-col">
+                      <div className="text-md pb-4 font-fugaz leading-6 text-gray-900">
+                        Web Pages
+                      </div>
+
                       <ul role="list" className="flex flex-1 flex-col gap-y-7">
                         <li>
                           <ul role="list" className="-mx-2 space-y-1">
@@ -149,11 +179,10 @@ export default function Example() {
                                   className={classNames(
                                     item.current
                                       ? 'bg-gray-700 text-gray-50'
-                                      : 'text-gray-200 hover:text-gray-50 hover:bg-gray-700',
-                                    'group flex gap-x-3 rounded-md p-2 text-lg leading-6 font-semibold'
+                                      : 'text-gray-900 hover:bg-gray-700 hover:text-gray-50',
+                                    'group flex gap-x-3 rounded-md p-2 text-lg font-semibold leading-6'
                                   )}
                                 >
-                                  
                                   {item.name}
                                 </a>
                               </li>
@@ -161,7 +190,9 @@ export default function Example() {
                           </ul>
                         </li>
                         <li>
-                          <div className="text-xs font-semibold leading-6 text-gray-200">Contact Us 👋</div>
+                          <div className="text-md font-fugaz leading-6 text-gray-900">
+                            Contact Us
+                          </div>
                           <ul role="list" className="-mx-2 mt-2 space-y-1">
                             {social.map((socialitem) => (
                               <li key={socialitem.name}>
@@ -169,15 +200,14 @@ export default function Example() {
                                   href={socialitem.href}
                                   className={classNames(
                                     socialitem.current
-                                      ? 'bg-gray-700 text-gray-50'
-                                      : 'text-gray-200 hover:text-gray-50 hover:bg-gray-700',
-                                    'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+                                      ? 'bg-gray-400 text-gray-900'
+                                      : 'text-gray-900 hover:bg-gray-700 hover:text-gray-50',
+                                    'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6'
                                   )}
                                 >
-                                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-gray-400 bg-gray-500 text-[0.625rem] font-medium text-gray-50">
-                                    {socialitem.initial}
+                                  <span className="truncate">
+                                    {socialitem.name}
                                   </span>
-                                  <span className="truncate">{socialitem.name}</span>
                                 </a>
                               </li>
                             ))}
@@ -199,7 +229,7 @@ export default function Example() {
             <div className="flex h-24 shrink-0 items-center">
               <img
                 className="h-16 w-auto"
-                src='/../images/logos/Official.png'
+                src="/../images/logos/Official.png"
                 alt="Your Company"
               />
             </div>
@@ -214,11 +244,10 @@ export default function Example() {
                           className={classNames(
                             item.current
                               ? 'bg-gray-300 text-gray-900'
-                              : 'text-gray-900 hover:text-gray-50 hover:bg-gray-300',
-                            'group flex gap-x-3 rounded-md p-2 text-xl leading-6 font-semibold'
+                              : 'text-gray-900 hover:bg-gray-300 hover:text-gray-50',
+                            'group flex gap-x-3 rounded-md p-2 text-xl font-semibold leading-6'
                           )}
                         >
-                          
                           {item.name}
                         </a>
                       </li>
@@ -226,7 +255,9 @@ export default function Example() {
                   </ul>
                 </li>
                 <li>
-                  <div className="text-lg font-fugaz leading-6 text-gray-900">Contact Us 👋</div>
+                  <div className="font-fugaz text-lg leading-6 text-gray-900">
+                    Contact Us 👋
+                  </div>
                   <ul role="list" className="-mx-2 mt-4 space-y-1">
                     {social.map((socialitem) => (
                       <li key={socialitem.name}>
@@ -235,11 +266,10 @@ export default function Example() {
                           className={classNames(
                             socialitem.current
                               ? 'bg-gray-300 text-gray-900'
-                              : 'text-gray-900 hover:text-gray-50 hover:bg-gray-300',
+                              : 'text-gray-900 hover:bg-gray-300 hover:text-gray-50',
                             'group flex gap-x-3 rounded-md p-2 text-sm leading-6'
                           )}
                         >
-
                           <span className="truncate">{socialitem.name}</span>
                         </a>
                       </li>
@@ -252,7 +282,11 @@ export default function Example() {
         </div>
 
         <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-gray-600 px-4 py-4 shadow-sm sm:px-6 lg:hidden">
-          <button type="button" className="-m-2.5 p-2.5 text-gray-200 lg:hidden" onClick={() => setSidebarOpen(true)}>
+          <button
+            type="button"
+            className="-m-2.5 p-2.5 text-gray-200 lg:hidden"
+            onClick={() => setSidebarOpen(true)}
+          >
             <span className="sr-only">Open sidebar</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
@@ -265,78 +299,55 @@ export default function Example() {
         <main className=" lg:pl-72">
           <div className="px-4 sm:px-6 lg:px-8">{/* Your content */}</div>
 
-    <div className="relative isolate overflow-hidden bg-gray-900 py-10 sm:py-32">
-      <img
-        src='/../images/stock/turbo.jpg'
-        alt=""
-        className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center opacity-50"
-      />
-    
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl  px-6">
-          <h2 className="text-6xl text-center font-fugaz tracking-tight text-gray-50 sm:text-7xl">JONES CO.</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-100">
-          We are TNs premier performance car and truck shop, offering high-quality modifications and customization at affordable prices.  Whether you want to boost the power of your muscle car, toughen up your pickup truck, or create a one-of-a-kind ride, our expert technicians have the experience and parts to make it happen.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
-          {cards.map((card) => (
-            <div key={card.name} className="flex gap-x-4 rounded-xl bg-gray-50/5 p-6 ring-1 ring-inset ring-gray-50/10">
-              <card.icon className="h-7 w-5 flex-none text-gray-400" aria-hidden="true" />
-              <div className="text-base leading-7">
-                <h3 className="font-semibold text-gray-50">{card.name}</h3>
-                <p className="mt-2 text-gray-300">{card.description}</p>
+          <div className="relative isolate overflow-hidden bg-gray-900 py-10 sm:py-32">
+            <img
+              src="/../images/stock/turbo.jpg"
+              alt=""
+              className="absolute inset-0 -z-10 h-full w-full object-cover object-right opacity-50 md:object-center"
+            />
+
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="mx-auto max-w-2xl  px-3">
+                <h2 className="text-center font-fugaz text-5xl tracking-tight text-gray-50 sm:text-7xl">
+                  JONES CO.
+                </h2>
+                <h2 className="text-center font-bold text-xl tracking-widest text-racing-red-50 sm:text-7xl">
+                  AUTOMOTIVE
+                </h2>
+                <p className="mt-6 text-md leading-8 text-gray-100">
+                  We a premier performance car and truck shop, offering
+                  high-quality modifications and customization at affordable
+                  prices.
+                </p>
+                <p className="mt-6 text-md leading-8 text-gray-100">
+                 Whether you want to boost the power of your muscle
+                  car, toughen up your pickup truck, or create a one-of-a-kind
+                  ride, our expert technicians have the experience and parts to
+                  make it happen.
+                </p>
+              </div>
+              <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">
+                {cards.map((card) => (
+                  <div
+                    key={card.name}
+                    className="flex gap-x-4 rounded-xl bg-gray-50/5 p-6 ring-1 ring-inset ring-gray-50/10"
+                  >
+                    <card.icon
+                      className="h-7 w-5 flex-none text-gray-400"
+                      aria-hidden="true"
+                    />
+                    <div className="text-base leading-7">
+                      <h3 className="font-semibold text-gray-50">
+                        {card.name}
+                      </h3>
+                      <p className="mt-2 text-gray-300">{card.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-    </div>
+          </div>
 
-    <div className="bg-gray-50 py-10 sm:py-24">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">From the blog</h2>
-          <p className="mt-2 text-lg leading-8 text-gray-600">
-            Learn how to grow your business with our expert advice.
-          </p>
-        </div>
-        <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {posts.map((post) => (
-            <article
-              key={post.id}
-              className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
-            >
-              <img src={post.imageUrl} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" />
-              <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
-              <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
-
-              <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-                <time dateTime={post.datetime} className="mr-8">
-                  {post.date}
-                </time>
-                <div className="-ml-4 flex items-center gap-x-4">
-                  <svg viewBox="0 0 2 2" className="-ml-0.5 h-0.5 w-0.5 flex-none fill-gray-50/50">
-                    <circle cx={1} cy={1} r={1} />
-                  </svg>
-                  <div className="flex gap-x-2.5">
-                    <img src={post.author.imageUrl} alt="" className="h-6 w-6 flex-none rounded-full bg-gray-50/10" />
-                    {post.author.name}
-                  </div>
-                </div>
-              </div>
-              <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-50">
-                <a href={post.href}>
-                  <span className="absolute inset-0" />
-                  {post.title}
-                </a>
-              </h3>
-            </article>
-          ))}
-        </div>
-      </div>
-    </div>
-          
         </main>
       </div>
     </>
