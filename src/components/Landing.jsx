@@ -89,7 +89,6 @@ const social = [
   { id: 8, name: 'Pinterest', href: '#', initial: 'P', current: false },
 ]
 
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -241,7 +240,7 @@ export default function Example() {
             <nav className="flex flex-1 flex-col">
               <ul role="list" className="flex flex-1 flex-col gap-y-7">
                 <li>
-                <div className="font-fugaz text-lg leading-6 text-gray-900 pb-5">
+                  <div className="pb-5 font-fugaz text-lg leading-6 text-gray-900">
                     Web Pages
                   </div>
                   <ul role="list" className="-mx-2 space-y-1">
@@ -314,48 +313,45 @@ export default function Example() {
               className="absolute inset-0 -z-10 h-full w-full object-cover object-right opacity-50 md:object-center"
             />
 
-            <div className="mx-auto max-w-7xl px-6 lg:px-8 h-full">
-              <div className="mx-auto max-w-4xl  px-3">
+            <div className="mx-auto h-full max-w-7xl px-6 lg:px-8">
+              <div className="mx-auto max-w-4xl  px-3 py-10">
                 <h2 className="text-center font-fugaz text-5xl tracking-tight text-gray-50 sm:text-7xl">
                   JONES CO.
                 </h2>
-                <h2 className="text-center text-xl font-bold tracking-widest text-gray-200 sm:text-3xl pb-2 md:pb-10">
+                <h2 className="pb-2 text-center text-xl font-bold tracking-widest text-gray-200 sm:text-3xl md:pb-10">
                   AUTOMOTIVE
                 </h2>
-                <p className="invisible sm:visible  text-md mt-6 leading-8 text-gray-100 justify">
+                <p className="text-md justify  invisible mt-6 leading-8 text-gray-100 sm:visible">
                   We are a premier performance car and truck shop, offering
                   high-quality modifications and customization at affordable
-                  prices.
-
-                  Whether you want to boost the power of your muscle car,
-                  toughen up your pickup truck, or create a one-of-a-kind ride,
-                  our expert technicians have the experience and parts to make
-                  it happen. 
+                  prices. Whether you want to boost the power of your muscle
+                  car, toughen up your pickup truck, or create a one-of-a-kind
+                  ride, our expert technicians have the experience and parts to
+                  make it happen.
                 </p>
                 <p className="text-md mt-6 font-bold leading-8 text-gray-100">
-                 Select your modification category below to start your new one
+                  Select your modification category below to start your new one
                   of a kind build.
                 </p>
                 <div className="mx-auto mt-16 grid grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:grid-cols-3 lg:gap-8">
-                {cards.map((card) => (
-                  <div className={card.color}>
-                  <div
-                    key={card.name}
-                    className=" flex gap-x-4  p-6 ring-1 ring-inset ring-gray-50/10"
-                  >
-                    <a href={card.href}>
-                      <div className="text-base leading-7">
-                        <h3 className="font-fugaz text-xl text-gray-50">
-                          {card.name}
-                        </h3>
-                        <p className="mt-2 text-gray-50">{card.description}</p>
+                  {cards.map((card) => (
+                    <div className={card.color} key={card.name}>
+                      <div className=" flex gap-x-4  p-6 ring-1 ring-inset ring-gray-50/10">
+                        <a href={card.href}>
+                          <div className="text-base leading-7">
+                            <h3 className="font-fugaz text-xl text-gray-50">
+                              {card.name}
+                            </h3>
+                            <p className="mt-2 text-gray-50">
+                              {card.description}
+                            </p>
+                          </div>
+                        </a>
                       </div>
-                    </a></div>
-                  </div>
-                ))}
+                    </div>
+                  ))}
+                </div>
               </div>
-              </div>
-
             </div>
           </div>
         </main>
