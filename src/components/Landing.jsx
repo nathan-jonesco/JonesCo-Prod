@@ -163,21 +163,21 @@ export default function Example() {
                         <li>
                           <div className="text-xs font-semibold leading-6 text-gray-200">Contact Us 👋</div>
                           <ul role="list" className="-mx-2 mt-2 space-y-1">
-                            {social.map((team) => (
-                              <li key={team.name}>
+                            {social.map((socialitem) => (
+                              <li key={socialitem.name}>
                                 <a
-                                  href={team.href}
+                                  href={socialitem.href}
                                   className={classNames(
-                                    team.current
+                                    socialitem.current
                                       ? 'bg-gray-700 text-gray-50'
                                       : 'text-gray-200 hover:text-gray-50 hover:bg-gray-700',
                                     'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                   )}
                                 >
                                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-gray-400 bg-gray-500 text-[0.625rem] font-medium text-gray-50">
-                                    {team.initial}
+                                    {socialitem.initial}
                                   </span>
-                                  <span className="truncate">{team.name}</span>
+                                  <span className="truncate">{socialitem.name}</span>
                                 </a>
                               </li>
                             ))}
@@ -195,11 +195,11 @@ export default function Example() {
         {/* Static sidebar for desktop */}
         <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
           {/* Sidebar component, swap this element with another sidebar if you like */}
-          <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-600 px-6">
-            <div className="flex h-16 shrink-0 items-center">
+          <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gray-200 px-6">
+            <div className="flex h-24 shrink-0 items-center">
               <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=gray-50"
+                className="h-16 w-auto"
+                src='/../images/logos/Official.png'
                 alt="Your Company"
               />
             </div>
@@ -213,18 +213,12 @@ export default function Example() {
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? 'bg-gray-700 text-gray-50'
-                              : 'text-gray-200 hover:text-gray-50 hover:bg-gray-700',
-                            'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+                              ? 'bg-gray-300 text-gray-900'
+                              : 'text-gray-900 hover:text-gray-50 hover:bg-gray-300',
+                            'group flex gap-x-3 rounded-md p-2 text-xl leading-6 font-semibold'
                           )}
                         >
-                          <item.icon
-                            className={classNames(
-                              item.current ? 'text-gray-50' : 'text-gray-200 group-hover:text-gray-50',
-                              'h-6 w-6 shrink-0'
-                            )}
-                            aria-hidden="true"
-                          />
+                          
                           {item.name}
                         </a>
                       </li>
@@ -232,41 +226,25 @@ export default function Example() {
                   </ul>
                 </li>
                 <li>
-                  <div className="text-xs font-semibold leading-6 text-gray-200">Your social</div>
-                  <ul role="list" className="-mx-2 mt-2 space-y-1">
-                    {social.map((team) => (
-                      <li key={team.name}>
+                  <div className="text-lg font-fugaz leading-6 text-gray-900">Contact Us 👋</div>
+                  <ul role="list" className="-mx-2 mt-4 space-y-1">
+                    {social.map((socialitem) => (
+                      <li key={socialitem.name}>
                         <a
-                          href={team.href}
+                          href={socialitem.href}
                           className={classNames(
-                            team.current
-                              ? 'bg-gray-700 text-gray-50'
-                              : 'text-gray-200 hover:text-gray-50 hover:bg-gray-700',
-                            'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+                            socialitem.current
+                              ? 'bg-gray-300 text-gray-900'
+                              : 'text-gray-900 hover:text-gray-50 hover:bg-gray-300',
+                            'group flex gap-x-3 rounded-md p-2 text-sm leading-6'
                           )}
                         >
-                          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-gray-400 bg-gray-500 text-[0.625rem] font-medium text-gray-50">
-                            {team.initial}
-                          </span>
-                          <span className="truncate">{team.name}</span>
+
+                          <span className="truncate">{socialitem.name}</span>
                         </a>
                       </li>
                     ))}
                   </ul>
-                </li>
-                <li className="-mx-6 mt-auto">
-                  <a
-                    href="#"
-                    className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-gray-50 hover:bg-gray-700"
-                  >
-                    <img
-                      className="h-8 w-8 rounded-full bg-gray-700"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      alt=""
-                    />
-                    <span className="sr-only">Your profile</span>
-                    <span aria-hidden="true">Tom Cook</span>
-                  </a>
                 </li>
               </ul>
             </nav>
@@ -289,62 +267,15 @@ export default function Example() {
 
     <div className="relative isolate overflow-hidden bg-gray-900 py-10 sm:py-32">
       <img
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+        src='/../images/stock/turbo.jpg'
         alt=""
-        className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
+        className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center opacity-50"
       />
-      <svg
-        viewBox="0 0 1097 845"
-        aria-hidden="true"
-        className="hidden transform-gpu blur-3xl sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:w-[68.5625rem]"
-      >
-        <path
-          fill="url(#7c63f5ae-130c-4c0f-963f-50ac7fe8d2e1)"
-          fillOpacity=".2"
-          d="M301.174 646.641 193.541 844.786 0 546.172l301.174 100.469 193.845-356.855c1.241 164.891 42.802 431.935 199.124 180.978 195.402-313.696 143.295-588.18 284.729-419.266 113.148 135.13 124.068 367.989 115.378 467.527L811.753 372.553l20.102 451.119-530.681-177.031Z"
-        />
-        <defs>
-          <linearGradient
-            id="7c63f5ae-130c-4c0f-963f-50ac7fe8d2e1"
-            x1="1097.04"
-            x2="-141.165"
-            y1=".22"
-            y2="363.075"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#776FFF" />
-            <stop offset={1} stopColor="#FF4694" />
-          </linearGradient>
-        </defs>
-      </svg>
-      <svg
-        viewBox="0 0 1097 845"
-        aria-hidden="true"
-        className="absolute -top-52 left-1/2 -z-10 w-[68.5625rem] -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
-      >
-        <path
-          fill="url(#49c00522-612e-41d3-bb32-ce7d1fa28850)"
-          fillOpacity=".2"
-          d="M301.174 646.641 193.541 844.786 0 546.172l301.174 100.469 193.845-356.855c1.241 164.891 42.802 431.935 199.124 180.978 195.402-313.696 143.295-588.18 284.729-419.266 113.148 135.13 124.068 367.989 115.378 467.527L811.753 372.553l20.102 451.119-530.681-177.031Z"
-        />
-        <defs>
-          <linearGradient
-            id="49c00522-612e-41d3-bb32-ce7d1fa28850"
-            x1="1097.04"
-            x2="-141.165"
-            y1=".22"
-            y2="363.075"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stopColor="#776FFF" />
-            <stop offset={1} stopColor="#FF4694" />
-          </linearGradient>
-        </defs>
-      </svg>
+    
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-5xl font-fugaz tracking-tight text-gray-50 sm:text-6xl">JONES CO.</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+        <div className="mx-auto max-w-2xl  px-6">
+          <h2 className="text-6xl text-center font-fugaz tracking-tight text-gray-50 sm:text-7xl">JONES CO.</h2>
+          <p className="mt-6 text-lg leading-8 text-gray-100">
           We are TN's premier performance car and truck shop, offering high-quality modifications and customization at affordable prices.  Whether you want to boost the power of your muscle car, toughen up your pickup truck, or create a one-of-a-kind ride, our expert technicians have the experience and parts to make it happen.
           </p>
         </div>
