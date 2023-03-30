@@ -24,7 +24,7 @@ const cards = [
       'Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur.',
     icon: PhoneIcon,
     href: '/race-build',
-    color: 'bg-racing-red-600 rounded-xl',
+    color: 'bg-racing-red-600 rounded-xl hover:animate-pulse',
   },
   {
     name: '🏕️ Off-Road Build',
@@ -32,7 +32,7 @@ const cards = [
       'Quod possimus sit modi rerum exercitationem quaerat atque tenetur ullam.',
     icon: LifebuoyIcon,
     href: '/offroad-build',
-    color: 'bg-offroad-yellow-700 rounded-xl',
+    color: 'bg-offroad-yellow-700 rounded-xl hover:animate-pulse',
   },
   {
     name: '🤩 Show Truck Build',
@@ -40,7 +40,7 @@ const cards = [
       'Ratione et porro eligendi est sed ratione rerum itaque. Placeat accusantium impedit eum odit.',
     icon: NewspaperIcon,
     href: '/truck-build',
-    color: 'bg-trucks-blue-600 rounded-xl',
+    color: 'bg-trucks-blue-600 rounded-xl hover:animate-pulse',
   },
 ]
 
@@ -250,9 +250,9 @@ export default function Example() {
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? 'bg-gray-300 text-gray-900'
+                              ? 'bg-gray-300 text-gray-50'
                               : 'text-gray-900 hover:bg-gray-300 hover:text-gray-50',
-                            'group flex gap-x-3 rounded-md p-2 text-xl font-semibold leading-6'
+                            'group flex gap-x-3 rounded-md p-0.5 text-md font-semibold leading-6'
                           )}
                         >
                           {item.name}
@@ -306,7 +306,7 @@ export default function Example() {
         <main className=" lg:pl-72">
           <div className="px-4 sm:px-6 lg:px-8">{/* Your content */}</div>
 
-          <div className="relative isolate overflow-hidden bg-gray-900 py-10 sm:py-32">
+          <div className="relative isolate overflow-hidden bg-gray-900 py-10 sm:py-16">
             <img
               src="/../images/stock/turbo.jpg"
               alt=""
@@ -314,7 +314,7 @@ export default function Example() {
             />
 
             <div className="mx-auto h-full max-w-7xl px-6 lg:px-8">
-              <div className="mx-auto max-w-4xl  px-3 py-10">
+              <div className="mx-auto max-w-5xl  px-3">
                 <h2 className="text-center font-fugaz text-5xl tracking-tight text-gray-50 sm:text-7xl">
                   JONES CO.
                 </h2>
