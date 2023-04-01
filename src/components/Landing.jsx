@@ -42,6 +42,14 @@ const buildtype = [
     href: '/truck-build',
     color: 'bg-trucks-blue-600 rounded-xl hover:animate-pulse',
   },
+  {
+    name: '🌫️ Drift Build',
+    description:
+      'Want bigger rims, louder exhaust, color matched parts, or a whole build? We can turn your truck into show quality.',
+    icon: NewspaperIcon,
+    href: '/truck-build',
+    color: 'bg-trucks-blue-600 rounded-xl hover:animate-pulse',
+  },
 ]
 
 const navigation = [
@@ -252,7 +260,7 @@ export default function Example() {
                             item.current
                               ? 'bg-gray-300 text-gray-50'
                               : 'text-gray-900 hover:bg-gray-300 hover:text-gray-50',
-                            'group flex gap-x-3 rounded-md p-0.5 text-md font-semibold leading-6'
+                            'text-md group flex gap-x-3 rounded-md p-0.5 font-semibold leading-6'
                           )}
                         >
                           {item.name}
@@ -288,16 +296,22 @@ export default function Example() {
           </div>
         </div>
 
-        <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-gray-600 px-4 py-4 shadow-sm sm:px-6 lg:hidden">
+        <div className="sticky top-0 z-40 flex  items-center gap-x-6 bg-gray-400 px-4 py-4 shadow-sm sm:px-6 lg:hidden">
           <button
             type="button"
-            className="-m-2.5 p-2.5 text-gray-200 lg:hidden"
+            className="-m-2.5 p-2.5 text-gray-900 lg:hidden"
             onClick={() => setSidebarOpen(true)}
           >
             <span className="sr-only">Open sidebar</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
-          <div className="flex-1 text-sm font-semibold leading-6 text-gray-50"></div>
+          <div className='px-12 sm:px-64 mr-5'>
+            <img
+              className="w-auto"
+              src="/../images/logos/Official.png"
+              alt="Your Company"
+            />
+          </div>
           <a href="#">
             <span className="sr-only">Your profile</span>
           </a>
@@ -313,25 +327,22 @@ export default function Example() {
               className="absolute inset-0 -z-10 h-full w-full object-cover object-right opacity-50 md:object-center"
             />
 
-            <div className="mx-auto h-full max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
               <div className="mx-auto max-w-5xl  px-3">
-                <h2 className="text-center font-fugaz text-5xl tracking-tight text-gray-50 sm:text-7xl">
-                  JONES CO.
-                </h2>
-                <h2 className="pb-2 text-center text-xl font-bold tracking-widest text-gray-200 sm:text-3xl md:pb-10">
-                  AUTOMOTIVE
+                <h2 className="pb-2 text-center font-fugaz text-xl font-bold tracking-widest text-gray-200 sm:text-3xl md:pb-10">
+                  START YOUR BUILD 💯
                 </h2>
                 <p className="text-md justify mt-6 leading-8 text-gray-100">
-                  Whether you want to boost the power of your muscle
-                  car, toughen up your pickup truck, or create a one-of-a-kind
-                  ride, our expert technicians have the experience and parts to
-                  make it happen.
+                  Whether you want to boost the power of your muscle car,
+                  toughen up your pickup truck, or create a one-of-a-kind ride,
+                  our expert technicians have the experience and parts to make
+                  it happen.
                 </p>
                 <p className="text-md mt-6 font-bold leading-8 text-gray-100">
                   Select your modification category below to start your new one
                   of a kind build.
                 </p>
-                <div className="mx-auto mt-16 grid grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:grid-cols-3 lg:gap-8">
+                <div className="mx-auto mt-16 grid grid-cols-1 gap-6 pb-48 sm:mt-20 sm:pb-32 lg:mx-0 lg:grid-cols-3 lg:gap-8">
                   {buildtype.map((card) => (
                     <div className={card.color} key={card.name}>
                       <div className=" flex gap-x-4  p-6 ring-1 ring-inset ring-gray-50/10">
