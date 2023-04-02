@@ -23,10 +23,10 @@ export default function Example() {
                   Where Your Dream Ride <b>Becomes Reality</b>.
                 </h1>
                 <p className="text-md mt-6 leading-8 text-red-50">
-                  If you're ready to turn your vehicle into a one-of-a-kind
+                {`If you're ready to turn your vehicle into a one-of-a-kind
                   masterpiece, look no further than our family-owned custom car
                   and truck shop. Contact us today to schedule a consultation
-                  and let us help you bring your vision to life.
+                  and let us help you bring your vision to life.`}
                 </p>
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <a
