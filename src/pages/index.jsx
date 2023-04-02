@@ -104,7 +104,7 @@ export default function Example() {
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
-                className="h-8 w-auto"
+                className="h-10 w-auto"
                 src='../images/logos/Official.png'
                 alt=""
               />
@@ -139,7 +139,7 @@ export default function Example() {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-red-600 shadow-lg ring-1 ring-red-900/5">
+                <Popover.Panel className="absolute -left-8 top-full z-50 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-red-600 shadow-lg ring-1 ring-red-900/5">
                   <div className="p-4">
                     {services.map((item) => (
                       <div
@@ -207,7 +207,7 @@ export default function Example() {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-56 rounded-xl bg-red-600 p-2 shadow-lg ring-1 ring-red-900/5">
+                <Popover.Panel className="absolute -left-8 top-full z-50 mt-3 w-56 rounded-xl bg-red-600 p-2 shadow-lg ring-1 ring-red-900/5">
                   {company.map((item) => (
                     <a
                       key={item.name}
@@ -221,14 +221,6 @@ export default function Example() {
               </Transition>
             </Popover>
           </Popover.Group>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a
-              href="#"
-              className="text-sm font-semibold leading-6 text-red-50"
-            >
-              Log in <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
         </nav>
         <Dialog
           as="div"

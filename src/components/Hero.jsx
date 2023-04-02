@@ -13,9 +13,9 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-white">
+    <div className="bg-white-z-50">
       <div className="flex min-h-full min-w-full flex-col">
-        <div>
+        <div className='-z-20'>
           <div className="relative isolate z-30 px-6 lg:px-8 bg-red-900/90">
             <div className="mx-auto max-w-2xl py-28">
               <div className="text-center">
@@ -49,7 +49,7 @@ export default function Example() {
               aria-hidden="true"
             >
               <div
-                className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+                className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
                 style={{
                   clipPath:
                     'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
@@ -58,13 +58,13 @@ export default function Example() {
             </div>
           </div>
         </div>
-        <div className="absolute flex-1">
+        <div className="-z-30 h-screen w-full -mt-72 absolute flex-1 object-cover content-center place-items-center">
           <video
             src="../videos/Drift.mp4"
             autoPlay
             loop
             muted
-            className="object-cover" // Is supposed to shrink or expand the video the length of the parent div
+            className="place-self-center w-full" // Is supposed to shrink or expand the video the length of the parent div
           >
             Your browser does not support the video tag.
           </video>
