@@ -13,17 +13,17 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-white-z-50">
-      <div className="flex min-h-full min-w-full flex-col">
-        <div className='-z-20'>
-          <div className="relative isolate z-30 px-6 lg:px-8 bg-red-900/90">
+    <div className="bg-white-z-50 overflow-hidden">
+      <div className="flex min-h-full min-w-full flex-col overflow-hidden">
+        <div className="-z-20">
+          <div className="relative isolate z-30 bg-gray-900/80 px-6 lg:px-8">
             <div className="mx-auto max-w-2xl py-28">
               <div className="text-center">
-                <h1 className="text-4xl font-bold tracking-tight text-red-50 sm:text-6xl">
+                <h1 className="text-3xl font-bold tracking-tight text-green-50 sm:text-6xl">
                   Where Your Dream Ride <b>Becomes Reality</b>.
                 </h1>
-                <p className="text-md mt-6 leading-8 text-red-50">
-                {`If you're ready to turn your vehicle into a one-of-a-kind
+                <p className="text-sm sm:text-md mt-6 leading-8 text-green-50">
+                  {`If you're ready to turn your vehicle into a one-of-a-kind
                   masterpiece, look no further than our family-owned custom car
                   and truck shop. Contact us today to schedule a consultation
                   and let us help you bring your vision to life.`}
@@ -31,13 +31,13 @@ export default function Example() {
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <a
                     href="#"
-                    className="rounded-md bg-red-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+                    className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
                   >
                     Build Estimator
                   </a>
                   <a
                     href="#"
-                    className="text-sm font-semibold leading-6 text-red-50"
+                    className="text-sm font-semibold leading-6 text-green-50"
                   >
                     Learn more <span aria-hidden="true">→</span>
                   </a>
@@ -58,16 +58,18 @@ export default function Example() {
             </div>
           </div>
         </div>
-        <div className="-z-30 h-screen w-full -mt-72 absolute flex-1 object-cover content-center place-items-center">
-          <video
-            src="../videos/Drift.mp4"
-            autoPlay
-            loop
-            muted
-            className="place-self-center w-full" // Is supposed to shrink or expand the video the length of the parent div
-          >
-            Your browser does not support the video tag.
-          </video>
+        <div className="absolute -z-40 flex flex-col h-full w-full pb-24 xl:-mt-72">
+          <div className='grow'>
+            <video
+              src="../videos/Drift.mp4"
+              autoPlay
+              loop
+              muted
+              className="object-cover h-full w-full " // Is supposed to shrink or expand the video the length of the parent div
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </div>
     </div>

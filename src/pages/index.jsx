@@ -1,27 +1,14 @@
 import Head from 'next/head'
 
-import { CallToAction } from '@/components/CallToAction'
+import  Contact  from '@/components/Contact'
 import { Faqs } from '@/components/Faqs'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import Hero from '@/components/Hero'
 import { Pricing } from '@/components/Pricing'
-import { PrimaryFeatures } from '@/components/PrimaryFeatures'
+import  PrimaryFeatures  from '@/components/PrimaryFeatures'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 import { Testimonials } from '@/components/Testimonials'
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -57,7 +44,7 @@ const services = [
   },
   {
     name: 'Suspension and Lifts',
-    description: 'Need your ride lowered or lifted, we have you covered!',
+    description: 'Need your ride lowegreen or lifted, we have you covegreen!',
     href: '#',
     icon: FingerPrintIcon,
   },
@@ -95,7 +82,7 @@ export default function Example() {
 
   return (
     <div>
-      <header className="bg-red-500">
+      <header className="bg-gradient-to-r from-green-500 to-blue-800">
         <nav
           className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
           aria-label="Global"
@@ -113,7 +100,7 @@ export default function Example() {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-red-700"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-green-400"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
@@ -122,10 +109,10 @@ export default function Example() {
           </div>
           <Popover.Group className="hidden lg:flex lg:gap-x-12">
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-red-50">
+              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-green-50">
                 Services
                 <ChevronDownIcon
-                  className="h-5 w-5 flex-none text-red-400"
+                  className="h-5 w-5 flex-none text-green-400"
                   aria-hidden="true"
                 />
               </Popover.Button>
@@ -139,34 +126,34 @@ export default function Example() {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute -left-8 top-full z-50 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-red-600 shadow-lg ring-1 ring-red-900/5">
+                <Popover.Panel className="absolute -left-8 top-full z-50 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-green-600 outline-green-300 outline shadow-lg ring-1 ring-green-900/5">
                   <div className="p-4">
                     {services.map((item) => (
                       <div
                         key={item.name}
-                        className="group relative flex gap-x-6 rounded-lg px-4 py-3 text-sm leading-6 hover:bg-red-700"
+                        className="group relative flex gap-x-6 rounded-lg px-4 py-3 text-sm leading-6 hover:bg-green-700"
                       >
                         <div className="flex-auto">
                           <a
                             href={item.href}
-                            className="block font-semibold text-red-50"
+                            className="block font-semibold text-green-50"
                           >
                             {item.name}
                             <span className="absolute inset-0" />
                           </a>
-                          <p className="mt-1 text-red-200">
+                          <p className="mt-1 text-green-200">
                             {item.description}
                           </p>
                         </div>
                       </div>
                     ))}
                   </div>
-                  <div className="grid grid-cols-2 divide-x divide-red-900/5 bg-red-700">
+                  <div className="grid grid-cols-2 divide-x divide-green-900/5 bg-green-700">
                     {callsToAction.map((item) => (
                       <a
                         key={item.name}
                         href={item.href}
-                        className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-red-50 hover:bg-red-800"
+                        className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-green-50 hover:bg-green-800 "
                       >
                         {item.name}
                       </a>
@@ -178,22 +165,22 @@ export default function Example() {
 
             <a
               href="#"
-              className="text-sm font-semibold leading-6 text-red-50"
+              className="text-sm font-semibold leading-6 text-green-50"
             >
-              Features
+              Contact Us
             </a>
             <a
               href="#"
-              className="text-sm font-semibold leading-6 text-red-50"
+              className="text-sm font-semibold leading-6 text-green-50"
             >
-              Marketplace
+              Build Estimator
             </a>
 
             <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-red-50">
+              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-green-50">
                 Company
                 <ChevronDownIcon
-                  className="h-5 w-5 flex-none text-red-400"
+                  className="h-5 w-5 flex-none text-green-400"
                   aria-hidden="true"
                 />
               </Popover.Button>
@@ -207,12 +194,12 @@ export default function Example() {
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute -left-8 top-full z-50 mt-3 w-56 rounded-xl bg-red-600 p-2 shadow-lg ring-1 ring-red-900/5">
+                <Popover.Panel className="absolute -left-8 top-full z-50 mt-3 w-56 rounded-xl bg-green-600 p-2 shadow-lg ring-1 ring-green-900/5 outline outline-green-300">
                   {company.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="block rounded-lg px-3 py-2 text-sm font-semibold leading-6 text-red-50 hover:bg-red-700"
+                      className="block rounded-lg px-3 py-2 text-sm font-semibold leading-6 text-green-50 hover:bg-green-700"
                     >
                       {item.name}
                     </a>
@@ -229,19 +216,19 @@ export default function Example() {
           onClose={setMobileMenuOpen}
         >
           <div className="fixed inset-0 z-10" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-red-900/10">
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-green-700 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-green-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                  className="h-14 w-auto"
+                  src='../images/logos/Official.png'
                   alt=""
                 />
               </a>
               <button
                 type="button"
-                className="-m-2.5 rounded-md p-2.5 text-red-700"
+                className="-m-2.5 rounded-md p-2.5 text-white"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
@@ -249,12 +236,12 @@ export default function Example() {
               </button>
             </div>
             <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-red-500/10">
+              <div className="-my-6 divide-y divide-green-500">
                 <div className="space-y-2 py-6">
                   <Disclosure as="div" className="-mx-3">
                     {({ open }) => (
                       <>
-                        <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-red-700">
+                        <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-green-700">
                           Services
                           <ChevronDownIcon
                             className={classNames(
@@ -270,7 +257,7 @@ export default function Example() {
                               key={item.name}
                               as="a"
                               href={item.href}
-                              className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-red-50 hover:bg-red-700"
+                              className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-green-50 hover:bg-green-700"
                             >
                               {item.name}
                             </Disclosure.Button>
@@ -282,13 +269,13 @@ export default function Example() {
 
                   <a
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-red-50 hover:bg-red-700"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-green-50 hover:bg-green-700"
                   >
                     Features
                   </a>
                   <a
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-red-50 hover:bg-red-700"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-green-50 hover:bg-green-700"
                   >
                     Marketplace
                   </a>
@@ -296,7 +283,7 @@ export default function Example() {
                   <Disclosure as="div" className="-mx-3">
                     {({ open }) => (
                       <>
-                        <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-red-700">
+                        <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:bg-green-700 ">
                           Company
                           <ChevronDownIcon
                             className={classNames(
@@ -312,7 +299,7 @@ export default function Example() {
                               key={item.name}
                               as="a"
                               href={item.href}
-                              className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-red-50 hover:bg-red-700"
+                              className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-green-50 hover:bg-green-700 "
                             >
                               {item.name}
                             </Disclosure.Button>
@@ -325,7 +312,7 @@ export default function Example() {
                 <div className="py-6">
                   <a
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-red-50 hover:bg-red-700"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-green-50 hover:bg-green-700"
                   >
                     Log in
                   </a>
@@ -348,7 +335,7 @@ export default function Example() {
             <Hero />
             <PrimaryFeatures />
             <SecondaryFeatures />
-            <CallToAction />
+            <Contact />
             <Faqs />
           </main>
           <Footer />
