@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 import  Contact  from '@/components/Contact'
-import { Faqs } from '@/components/Faqs'
+import Faqs  from '@/components/Faqs'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import Hero from '@/components/Hero'
@@ -44,7 +44,7 @@ const services = [
   },
   {
     name: 'Suspension and Lifts',
-    description: 'Need your ride lowegreen or lifted, we have you covegreen!',
+    description: 'Need your ride lowered or lifted, we have you covegreen!',
     href: '#',
     icon: FingerPrintIcon,
   },

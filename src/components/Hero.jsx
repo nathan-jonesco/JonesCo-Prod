@@ -61,7 +61,7 @@ export default function Example() {
         <div className="absolute -z-40 flex flex-col h-full w-full pb-24 xl:-mt-72">
           <div className='grow'>
             <video
-              src="../videos/Drift.mp4"
+              src="../videos/Drift2.mp4"
               autoPlay
               loop
               muted
