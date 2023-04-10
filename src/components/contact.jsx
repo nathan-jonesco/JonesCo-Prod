@@ -46,7 +46,7 @@ export default function Example() {
                       name="first-name"
                       id="first-name"
                       autoComplete="given-name"
-                      className="text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-indigo-600 block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                      className="text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-jc-gold-600 block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -63,7 +63,7 @@ export default function Example() {
                       name="last-name"
                       id="last-name"
                       autoComplete="family-name"
-                      className="text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-indigo-600 block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                      className="text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-jc-gold-600 block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -80,7 +80,7 @@ export default function Example() {
                       name="email"
                       type="email"
                       autoComplete="email"
-                      className="text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-indigo-600 block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                      className="text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-jc-gold-600 block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -97,7 +97,7 @@ export default function Example() {
                       name="company"
                       id="company"
                       autoComplete="organization"
-                      className="text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-indigo-600 block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                      className="text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-jc-gold-600 block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -120,7 +120,7 @@ export default function Example() {
                       id="phone"
                       autoComplete="tel"
                       aria-describedby="phone-description"
-                      className="text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-indigo-600 block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                      className="text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-jc-gold-600 block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
@@ -142,7 +142,7 @@ export default function Example() {
                       name="message"
                       rows={4}
                       aria-describedby="message-description"
-                      className="text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-indigo-600 block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
+                      className="text-gray-900 ring-gray-300 placeholder:text-gray-400 focus:ring-jc-gold-600 block w-full rounded-md border-0 px-3.5 py-2 shadow-sm ring-1 ring-inset focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
                       defaultValue={''}
                     />
                   </div>
@@ -158,7 +158,7 @@ export default function Example() {
                         name="budget"
                         defaultValue="under_25k"
                         type="radio"
-                        className="border-gray-300 text-indigo-600 focus:ring-indigo-600 mt-1 h-4 w-4 shadow-sm"
+                        className="border-gray-300 text-jc-gold-600 focus:ring-jc-gold-600 mt-1 h-4 w-4 shadow-sm"
                       />
                       <label htmlFor="budget-under-25k">Less than $25K</label>
                     </div>
@@ -168,7 +168,7 @@ export default function Example() {
                         name="budget"
                         defaultValue="25k-50k"
                         type="radio"
-                        className="border-gray-300 text-indigo-600 focus:ring-indigo-600 mt-1 h-4 w-4 shadow-sm"
+                        className="border-gray-300 text-jc-gold-600 focus:ring-jc-gold-600 mt-1 h-4 w-4 shadow-sm"
                       />
                       <label htmlFor="budget-25k-50k">$25K – $50K</label>
                     </div>
@@ -178,7 +178,7 @@ export default function Example() {
                         name="budget"
                         defaultValue="50k-100k"
                         type="radio"
-                        className="border-gray-300 text-indigo-600 focus:ring-indigo-600 mt-1 h-4 w-4 shadow-sm"
+                        className="border-gray-300 text-jc-gold-600 focus:ring-jc-gold-600 mt-1 h-4 w-4 shadow-sm"
                       />
                       <label htmlFor="budget-50k-100k">$50K – $100K</label>
                     </div>
@@ -188,7 +188,7 @@ export default function Example() {
                         name="budget"
                         defaultValue="over_100k"
                         type="radio"
-                        className="border-gray-300 text-indigo-600 focus:ring-indigo-600 mt-1 h-4 w-4 shadow-sm"
+                        className="border-gray-300 text-jc-gold-600 focus:ring-jc-gold-600 mt-1 h-4 w-4 shadow-sm"
                       />
                       <label htmlFor="budget-over-100k">$100K+</label>
                     </div>
@@ -198,7 +198,7 @@ export default function Example() {
               <div className="border-gray-900/10 mt-10 flex justify-end border-t pt-8">
                 <button
                   type="submit"
-                  className="bg-indigo-600 hover:bg-indigo-500 focus-visible:outline-indigo-600 rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                  className="bg-gold-600 hover:bg-gold-500 focus-visible:outline-gold-600 rounded-md px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                 >
                   Send message
                 </button>
