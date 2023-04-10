@@ -32,7 +32,7 @@ export default function Example() {
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">
               <h2 className="text-xl sm:text-2xl font-semibold leading-7 text-JC-gold-600">What Else?</h2>
-              <p className="font-jc mt-2 text-4xl text-black sm:text-6xl">We Race Prep for You.</p>
+              <p className="font-jc mt-2 text-4xl text-black sm:text-6xl">We Prep for You.</p>
               <p className="mt-6 text-lg leading-8 text-JC-gold-900">
                 Short on time, but need to have your car prepped for this weekends race? We offer race prep services, to make sure you show up prepared to every race.
               </p>
