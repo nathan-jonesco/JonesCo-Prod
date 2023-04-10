@@ -26,7 +26,7 @@ export default function Example() {
         <div className="px-6 lg:px-8 ">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg ">
             <h2 className=" text-gray-900 font-jc text-6xl ">Contact Us</h2>
-            <p className="text-gray-600 text-md mt-2 leading-8">
+            <p className="text-gold-900 text-md mt-2 leading-8">
               Our team of experts is always happy to help and will get back to
               you as soon as possible. Thank you for considering Jones Co.
               Performance Auto Shop for your high-performance vehicle needs!
@@ -151,7 +151,7 @@ export default function Example() {
                   <legend className="text-gray-900 block text-sm font-semibold leading-6">
                     Expected budget
                   </legend>
-                  <div className="text-gray-600 mt-4 space-y-4 text-sm leading-6">
+                  <div className="text-gold-900 mt-4 space-y-4 text-sm leading-6">
                     <div className="flex gap-x-2.5">
                       <input
                         id="budget-under-25k"
