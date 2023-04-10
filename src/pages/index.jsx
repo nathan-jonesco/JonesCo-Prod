@@ -9,6 +9,7 @@ import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import ProcessPlan from '@/components/ProcessPlan'
 import Specialties from '@/components/Specialties'
+import RacePrep from '@/components/RacePrep'
 import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
@@ -30,9 +31,8 @@ export default function Home() {
         <ProcessPlan />
         <CTAA />
         <Specialties/>
-
-
         <CTAB />
+        <RacePrep/>
         <CTAC />
       </main>
       <Footer />
