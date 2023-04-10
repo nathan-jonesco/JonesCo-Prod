@@ -34,15 +34,15 @@ export default function Example() {
               <h2 className="text-xl sm:text-2xl font-semibold leading-7 text-JC-gold-600">What Else?</h2>
               <p className="font-jc mt-2 text-4xl text-black sm:text-6xl">We Race Prep for You.</p>
               <p className="mt-6 text-lg leading-8 text-JC-gold-900">
-                Short on time, but need to have your car prepped for this weekends race? That is why we offer race prep services, to make sure you show up prepared to every race.
+                Short on time, but need to have your car prepped for this weekends race? We offer race prep services, to make sure you show up prepared to every race.
               </p>
-              <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-JC-gold-600 lg:max-w-none">
+              <dl className="mt-10 max-w-xl space-y-8 text-base leading-7  lg:max-w-none">
                 {features.map((feature) => (
                   <div key={feature.name} className="relative">
-                    <dt className="font-jc text-JC-gold-900 text-2xl pb-2">
+                    <dt className="font-jc text-JC-gold-600 text-3xl pb-2">
                       {feature.name}
                     </dt>{' '}
-                    <dd className="inline">{feature.description}</dd>
+                    <dd className="inline text-JC-gold-900">{feature.description}</dd>
                   </div>
                 ))}
               </dl>
