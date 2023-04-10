@@ -27,9 +27,11 @@ export default function Home() {
       <Header />
       <main className=''>
         <Hero />
-        <Specialties/>
-        <CTAA />
         <ProcessPlan />
+        <CTAA />
+        <Specialties/>
+
+
         <CTAB />
         <CTAC />
       </main>

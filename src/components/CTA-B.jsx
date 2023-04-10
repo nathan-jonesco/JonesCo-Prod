@@ -5,7 +5,7 @@ export default function Example() {
         <h2 className="">
           <span className="text-xl tracking-tight text-JC-gold-900 sm:text-3xl">Tired of Losing?</span>
           <br />
-          <span className="text-5xl font-jc tracking-tight text-JC-gold-900 sm:text-8xl">Let's fix that.</span>
+          <span className="text-5xl font-jc tracking-tight text-JC-gold-900 sm:text-8xl">We Can Fix That.</span>
         </h2>
         <div className="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
           <a

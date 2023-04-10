@@ -25,7 +25,7 @@ const steps = [
 export default function Example() {
   return (
     <div className="bg-white">
-      <div className="divide-black/30 mx-auto max-w-7xl divide-y px-6 py-16 sm:py-32 lg:px-8 lg:py-40">
+      <div className="divide-black/30 mx-auto max-w-7xl divide-y px-6 py-10 sm:py-32 lg:px-8 lg:py-40">
         <h2 className="text-black text-4xl sm:text-8xl leading-10 tracking-tight  font-jc">
           Ready to Start?
         </h2>

@@ -15,7 +15,7 @@ export default function Example() {
           </span>
         </h2>
         <p className="mt-8 text-sm leading-8 text-white sm:mt-12 sm:text-lg">
-          With our high-quality workmanship and personalized service, we'll help
+          With our high-quality workmanship and personalized service, we will help
           you achieve your dream upgrades and make your ride the envy of the
           track.
         </p>
