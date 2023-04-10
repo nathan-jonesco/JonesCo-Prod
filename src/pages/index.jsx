@@ -1,11 +1,14 @@
 import Head from 'next/head'
 
-import  CallToAction  from '@/components/CallToAction'
+import  CTAA  from '@/components/CTA-A'
+import  CTAB  from '@/components/CTA-B'
+import  CTAC  from '@/components/CTA-C'
 import { Faqs } from '@/components/Faqs'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import Hero from '@/components/Hero'
 import ProcessPlan from '@/components/ProcessPlan'
+import Specialties from '@/components/Specialties'
 import { Pricing } from '@/components/Pricing'
 import { PrimaryFeatures } from '@/components/PrimaryFeatures'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
@@ -24,8 +27,11 @@ export default function Home() {
       <Header />
       <main className=''>
         <Hero />
+        <Specialties/>
+        <CTAA />
         <ProcessPlan />
-        <CallToAction />
+        <CTAB />
+        <CTAC />
       </main>
       <Footer />
     </>

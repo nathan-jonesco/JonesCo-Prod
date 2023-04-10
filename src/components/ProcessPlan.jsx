@@ -2,12 +2,12 @@ const steps = [
   {
     id: 1,
     short: '1. Describe Your Goals. 🤔',
-    long: 'We want to understand your needs so we can deliver exactly what you want.',
+    long: 'Use our contact form to let us know how we can help you achieve your goals. We want to understand your needs so we can deliver exactly what you want. ',
   },
   {
     id: 2,
     short: '2. Accept Our Quote. 📃',
-    long: 'Our quotes are competitive and transparent, so you know exactly what you are getting.',
+    long: 'Once we have a better idea of your car, and your goals, we can give you a quote. Our quotes are competitive and transparent, so you know exactly what you are getting.',
   },
   {
     id: 3,
@@ -25,11 +25,11 @@ const steps = [
 export default function Example() {
   return (
     <div className="bg-white">
-      <div className="divide-black/50 mx-auto max-w-7xl divide-y px-6 py-10 sm:py-32 lg:px-8 lg:py-40">
-        <h2 className="text-JC-gold-900 text-4xl leading-10 tracking-tight  font-jc">
-          How Do You Begin?
+      <div className="divide-black/30 mx-auto max-w-7xl divide-y px-6 py-16 sm:py-32 lg:px-8 lg:py-40">
+        <h2 className="text-black text-4xl sm:text-8xl leading-10 tracking-tight  font-jc">
+          Ready to Start?
         </h2>
-        <dl className="divide-black/30 mt-10 space-y-8 divide-y">
+        <dl className="divide-black/20 mt-10 space-y-8 divide-y">
           {steps.map((step) => (
             <div
               key={step.id}
