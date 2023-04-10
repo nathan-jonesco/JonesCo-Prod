@@ -1,83 +1,155 @@
-import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  Cog6ToothIcon,
-  FingerPrintIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from '@heroicons/react/20/solid'
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
+import { Tab } from '@headlessui/react'
+import clsx from 'clsx'
+
+import { Container } from '@/components/Container'
+import backgroundImage from '@/images/background-features.jpg'
+import screenshotExpenses from '@/images/screenshots/expenses.png'
+import screenshotPayroll from '@/images/screenshots/payroll.png'
+import screenshotReporting from '@/images/screenshots/reporting.png'
+import screenshotVatReturns from '@/images/screenshots/vat-returns.png'
 
 const features = [
   {
-    name: 'Unbeatable Quality.',
+    title: 'Payroll',
     description:
-      'We take pride in providing the highest quality workmanship, using only the best materials and equipment to ensure that every job is done correctly and to the highest standards.',
-    icon: CloudArrowUpIcon,
+      "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
+    image: screenshotPayroll,
   },
   {
-    name: 'Competitive Pricing.',
+    title: 'Claim expenses',
     description:
-      'We offer competitive pricing to ensure that our customers receive the best value for their money. We believe in transparent pricing and will never surprise our customers with hidden fees or costs.',
-    icon: LockClosedIcon,
+      "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
+    image: screenshotExpenses,
   },
   {
-    name: 'Reliable Power.',
+    title: 'VAT handling',
     description:
-      'Our team of skilled and experienced technicians are passionate about cars and dedicated to providing high-quality performance services. We use specialized equipment and techniques to ensure that every job is done to the best of our ability.',
-    icon: ArrowPathIcon,
+      "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
+    image: screenshotVatReturns,
   },
   {
-    name: 'Personalized Services.',
+    title: 'Reporting',
     description:
-      'We work closely with our clients to ensure that every project is tailored to their unique needs and preferences. Our goal is to bring our clients visions to life and create a one-of-a-kind vehicle that exceeds their expectations.',
-    icon: FingerPrintIcon,
-  },
-  {
-    name: 'Specialized Equipment.',
-    description:
-      'We work closely with our clients to ensure that every project is tailored to their unique needs and preferences. Our goal is to bring our clients visions to life and create a one-of-a-kind vehicle that exceeds their expectations.',
-    icon: Cog6ToothIcon,
-  },
-  {
-    name: 'Premium Experience.',
-    description:
-      'We believe that every customer deserves a premium experience, and we strive to provide the highest level of customer service and satisfaction. From the initial consultation to the final product, we are committed to providing our customers with an exceptional experience.',
-    icon: ServerIcon,
+      'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
+    image: screenshotReporting,
   },
 ]
 
-export default function Example() {
+export function PrimaryFeatures() {
+  let [tabOrientation, setTabOrientation] = useState('horizontal')
+
+  useEffect(() => {
+    let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
+
+    function onMediaQueryChange({ matches }) {
+      setTabOrientation(matches ? 'vertical' : 'horizontal')
+    }
+
+    onMediaQueryChange(lgMediaQuery)
+    lgMediaQuery.addEventListener('change', onMediaQueryChange)
+
+    return () => {
+      lgMediaQuery.removeEventListener('change', onMediaQueryChange)
+    }
+  }, [])
+
   return (
-    <div className="bg-blue-900 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-xl font-semibold leading-7 text-green-400">
-            What makes us different?
+    <section
+      id="features"
+      aria-label="Features for running your books"
+      className="relative overflow-hidden bg-blue-600 pb-28 pt-20 sm:py-32"
+    >
+      <Image
+        className="absolute left-1/2 top-1/2 max-w-none translate-x-[-44%] translate-y-[-42%]"
+        src={backgroundImage}
+        alt=""
+        width={2245}
+        height={1636}
+        unoptimized
+      />
+      <Container className="relative">
+        <div className="max-w-2xl md:mx-auto md:text-center xl:max-w-none">
+          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl md:text-5xl">
+            Everything you need to run your books.
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-5xl">
-            We Set the Bar.
-          </p>
-          <p className="mt-6 text-lg leading-8 text-blue-50">
-            We spent two years laying out every detail of our performance shop
-            before we even stepped foot in it. We wanted to know where shops in
-            TN have been lacking, and how we could raise the bar.
+          <p className="mt-6 text-lg tracking-tight text-blue-100">
+            Well everything you need if you aren’t that picky about minor
+            details like tax compliance.
           </p>
         </div>
-        <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-x-16">
-          {features.map((feature) => (
-            <div key={feature.name} className="relative pl-9">
-              <dt className="inline font-semibold text-white">
-                <feature.icon
-                  className="absolute left-1 top-1 h-5 w-5 text-green-500"
-                  aria-hidden="true"
-                />
-                {feature.name}
-              </dt>{' '}
-              <dd className="inline">{feature.description}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-    </div>
+        <Tab.Group
+          as="div"
+          className="mt-16 grid grid-cols-1 items-center gap-y-2 pt-10 sm:gap-y-6 md:mt-20 lg:grid-cols-12 lg:pt-0"
+          vertical={tabOrientation === 'vertical'}
+        >
+          {({ selectedIndex }) => (
+            <>
+              <div className="-mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:overflow-visible sm:pb-0 lg:col-span-5">
+                <Tab.List className="relative z-10 flex gap-x-4 whitespace-nowrap px-4 sm:mx-auto sm:px-0 lg:mx-0 lg:block lg:gap-x-0 lg:gap-y-1 lg:whitespace-normal">
+                  {features.map((feature, featureIndex) => (
+                    <div
+                      key={feature.title}
+                      className={clsx(
+                        'group relative rounded-full px-4 py-1 lg:rounded-l-xl lg:rounded-r-none lg:p-6',
+                        selectedIndex === featureIndex
+                          ? 'bg-white lg:bg-white/10 lg:ring-1 lg:ring-inset lg:ring-white/10'
+                          : 'hover:bg-white/10 lg:hover:bg-white/5'
+                      )}
+                    >
+                      <h3>
+                        <Tab
+                          className={clsx(
+                            'font-display text-lg [&:not(:focus-visible)]:focus:outline-none',
+                            selectedIndex === featureIndex
+                              ? 'text-blue-600 lg:text-white'
+                              : 'text-blue-100 hover:text-white lg:text-white'
+                          )}
+                        >
+                          <span className="absolute inset-0 rounded-full lg:rounded-l-xl lg:rounded-r-none" />
+                          {feature.title}
+                        </Tab>
+                      </h3>
+                      <p
+                        className={clsx(
+                          'mt-2 hidden text-sm lg:block',
+                          selectedIndex === featureIndex
+                            ? 'text-white'
+                            : 'text-blue-100 group-hover:text-white'
+                        )}
+                      >
+                        {feature.description}
+                      </p>
+                    </div>
+                  ))}
+                </Tab.List>
+              </div>
+              <Tab.Panels className="lg:col-span-7">
+                {features.map((feature) => (
+                  <Tab.Panel key={feature.title} unmount={false}>
+                    <div className="relative sm:px-6 lg:hidden">
+                      <div className="absolute -inset-x-4 bottom-[-4.25rem] top-[-6.5rem] bg-white/10 ring-1 ring-inset ring-white/10 sm:inset-x-0 sm:rounded-t-xl" />
+                      <p className="relative mx-auto max-w-2xl text-base text-white sm:text-center">
+                        {feature.description}
+                      </p>
+                    </div>
+                    <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
+                      <Image
+                        className="w-full"
+                        src={feature.image}
+                        alt=""
+                        priority
+                        sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
+                      />
+                    </div>
+                  </Tab.Panel>
+                ))}
+              </Tab.Panels>
+            </>
+          )}
+        </Tab.Group>
+      </Container>
+    </section>
   )
 }
