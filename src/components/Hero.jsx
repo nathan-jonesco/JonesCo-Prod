@@ -1,6 +1,6 @@
 export default function Example() {
   return (
-    <div className="relative isolate overflow-hidden bg-black px-6 py-16 sm:py-32 lg:px-8">
+    <div className="relative isolate overflow-hidden bg-black px-6 py-32 sm:py-48 lg:px-8">
       <img
         src="/../Stock/camaro_wheelie.jpg"
         alt=""
