@@ -25,13 +25,8 @@ export default function Example() {
       <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32 ">
         <div className="px-6 lg:px-8 ">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg ">
-            <h2 className=" text-gray-900 font-jc text-6xl ">
-              Let's Get Rollin.
-            </h2>
-            <p className="text-gray-600 mt-2 text-lg leading-8">
-              If you have any questions or are interested in learning more about
-              our services, please feel free to contact us. You can reach us by
-              phone, email, or by filling out the contact form on our website.
+            <h2 className=" text-gray-900 font-jc text-6xl ">Contact Us</h2>
+            <p className="text-gray-600 text-md mt-2 leading-8">
               Our team of experts is always happy to help and will get back to
               you as soon as possible. Thank you for considering Jones Co.
               Performance Auto Shop for your high-performance vehicle needs!
