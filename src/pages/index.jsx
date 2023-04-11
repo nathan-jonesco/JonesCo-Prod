@@ -13,6 +13,7 @@ import RacePrep from '@/components/RacePrep'
 import Parts from '@/components/Parts'
 import Finance from '@/components/financing'
 import Contact from '@/components/contact'
+import Banner from '@/components/banner'
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
           content="Where your dream ride becomes reality."
         />
       </Head>
+      <Banner />
       <Header />
       <main className=''>
         <Hero />

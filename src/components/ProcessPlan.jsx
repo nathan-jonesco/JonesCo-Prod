@@ -26,8 +26,8 @@ export default function Example() {
   return (
     <div className="bg-white">
       <div className="divide-black/30 mx-auto max-w-7xl divide-y px-6 py-10 sm:py-32 lg:px-8 lg:py-40">
-        <h2 className="text-black text-4xl sm:text-8xl leading-10 tracking-tight  font-jc">
-          Ready to Start?
+        <h2 className="text-black text-5xl sm:text-8xl leading-10 tracking-tight  font-jc">
+          We Keep it Simple.
         </h2>
         <dl className="divide-black/20 mt-10 space-y-8 divide-y">
           {steps.map((step) => (

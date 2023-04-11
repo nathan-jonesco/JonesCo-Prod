@@ -15,10 +15,10 @@ export default function Example() {
             Get started
           </a>
           <a
-            href="#"
+            href="/services"
             className="text-sm font-semibold leading-6 text-JC-gold-900"
           >
-            Learn more <span aria-hidden="true">→</span>
+            Services <span aria-hidden="true">→</span>
           </a>
         </div>
       </div>
