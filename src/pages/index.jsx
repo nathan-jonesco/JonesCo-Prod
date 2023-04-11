@@ -12,6 +12,7 @@ import Specialties from '@/components/Specialties'
 import RacePrep from '@/components/RacePrep'
 import Parts from '@/components/Parts'
 import Finance from '@/components/financing'
+import Contact from '@/components/contact'
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
         <Parts />
         <CTAD />
         <Finance />
+        <Contact />
       </main>
       <Footer />
     </>
