@@ -4,10 +4,11 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Services', href: '/services' },
+  { name: 'Features', href: '/features' },
+  { name: 'Financing', href: '/finance' },
+  { name: 'Parts', href: '/parts' },
+  { name: 'About', href: '/about' },
 ]
 
 export default function Example() {
@@ -41,7 +42,7 @@ export default function Example() {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link href="/contact" className="text-xl leading-6 text-nero-900  tracking-wide font-jc uppercase">
-            Contact Us <span aria-hidden="true">&rarr;</span>
+            👋🏼 Contact Us <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
       </nav>
