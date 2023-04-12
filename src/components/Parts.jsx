@@ -1,12 +1,12 @@
 export default function Example() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white py-10 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-x-8 gap-y-16 lg:grid-cols-2">
           <div className="mx-auto w-full max-w-xl lg:mx-0">
-            <h2 className="text-gray-900 font-jc text-5xl tracking-tight">
-              Premium Cars Deserve{' '}
-              <span className="text-JC-gold-600"> Premium Parts.</span>{' '}
+            <h2 className="tracking-tight">
+            <span className="text-lg sm:text-5xl "> Premium Cars Deserve...{' '}</span>
+              <span className="text-JC-gold-600 text-6xl sm:text-5xl font-jc "> <br></br>Premium Parts.</span>{' '}
             </h2>
             <p className="text-gray-600 mt-6 text-lg leading-8">
               We only stock high quality parts from high quality vendors, period. Our customers come to us
