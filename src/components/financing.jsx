@@ -18,12 +18,12 @@ const features = [
 
 export default function Example() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white py-14 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <div>
             <h2 className="text-base font-semibold leading-7 text-JC-gold-600">We Partnered With<b> Snap Finance</b>!</h2>
-            <p className="mt-2 text-3xl text-gray-900 sm:text-7xl font-jc">Need Financing?</p>
+            <p className="mt-2 text-6xl text-gray-900 sm:text-7xl font-jc">Need Financing?</p>
             <p className="mt-6 text-base leading-7 text-gray-600">
               Jones Co. Performance is partnered with Snap Finance to offer all of our customers a premium shopping experience.
             </p>

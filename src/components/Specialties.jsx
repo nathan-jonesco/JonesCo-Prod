@@ -1,3 +1,6 @@
+import Link from "next/link";
+
+
 import {
   ArrowPathIcon,
   CloudArrowUpIcon,
@@ -9,21 +12,21 @@ const features = [
     name: 'LS Engine Swaps  🫀',
     description:
       'We specialize in LS engine swaps, which involve replacing the factory engine in a vehicle with a high-performance LS engine. We use high-quality parts and equipment to ensure that your LS engine swap is done right the first time.',
-    href: '#',
+    href: '/services',
     icon: CloudArrowUpIcon,
   },
   {
     name: 'Power Adders 🦾',
     description:
       'We also specialize in power adders, which are aftermarket components that increase the power output of an engine. Some examples of power adders include superchargers, turbochargers, and nitrous oxide systems.',
-    href: '#',
+    href: '/services',
     icon: LockClosedIcon,
   },
   {
     name: 'Supporting Mods 🌱',
     description:
       'Some examples of supporting mods include suspension upgrades, brake upgrades, and exhaust upgrades. Our team of skilled technicians can help you choose the right supporting mods for your vehicle and goals.',
-    href: '#',
+    href: '/services',
     icon: ArrowPathIcon,
   },
 ]
@@ -56,12 +59,12 @@ export default function Example() {
                 <dd className="text-gray-600 mt-4 flex flex-auto flex-col text-base leading-7">
                   <p className="flex-auto">{feature.description}</p>
                   <p className="mt-6">
-                    <a
+                    <Link
                       href={feature.href}
                       className="text-sm font-semibold leading-6 text-JC-gold-600"
                     >
                       Learn more <span aria-hidden="true">→</span>
-                    </a>
+                    </Link>
                   </p>
                 </dd>
               </div>

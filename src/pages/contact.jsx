@@ -1,5 +1,5 @@
 import Head from 'next/head'
-
+import Banner from '@/components/banner'
 import CTAA from '@/components/CTA-A'
 import CTAB from '@/components/CTA-B'
 import CTAC from '@/components/CTA-C'
@@ -22,6 +22,7 @@ export default function Home() {
           content="Where your dream ride becomes reality."
         />
       </Head>
+      <Banner />
       <Header />
       <main className="">
         <Contact />
