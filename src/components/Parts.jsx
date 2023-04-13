@@ -22,8 +22,8 @@ export default function Example() {
               >
                 Contact Us
               </Link>
-              <Link href="/parts" className="text-gray-900 text-sm font-semibold">
-                Learn More <span aria-hidden="true">&rarr;</span>
+              <Link href="https://shop.jonesco.autos" className="text-gray-900 text-sm font-semibold">
+                View Inventory <span aria-hidden="true">&rarr;</span>
               </Link>
             </div>
           </div>
