@@ -7,7 +7,6 @@ const navigation = [
   { name: 'Services', href: '/services' },
   { name: 'Features', href: '/features' },
   { name: 'Financing', href: '/finance' },
-  { name: 'Shop', href: '/shop' },
   { name: 'Blog', href: 'https://blog.jonesco.autos' },
   { name: 'About', href: '/about' },
 ]
