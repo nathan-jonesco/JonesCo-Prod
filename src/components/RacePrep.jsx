@@ -4,22 +4,22 @@ const features = [
   {
     name: 'Fluid Changes and Refills',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'We will perform fluid changes and refills to ensure that your vehicle is running smoothly and efficiently. This includes changing the oil, coolant, transmission fluid, and brake fluid as needed.',
     icon: CloudArrowUpIcon,
   },
   {
     name: 'Full Inspection Reports',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
+    description: 'We will conduct a comprehensive inspection of your vehicle to identify any issues or areas of concern. Our team of experts will inspect everything from the engine and transmission to the suspension and brakes, and will provide you with a detailed report of our findings.',
     icon: LockClosedIcon,
   },
   {
     name: 'Detailing and Polishing',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    description: 'We will clean and polish your vehicle to ensure that it looks its best on race day. This includes washing and waxing the exterior, cleaning the interior, and polishing the wheels and tires.',
     icon: ServerIcon,
   },
   {
     name: 'Tire Cleaning',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    description: 'We will thoroughly clean and inspect your tires to ensure that they are in optimal condition for racing. This includes removing any debris or buildup from the treads, checking for any signs of wear or damage, and inflating the tires to the appropriate pressure.',
     icon: ServerIcon,
   },
 ]
