@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Jones Co. || Features</title>
+        <title>Jones Co. Perfomance || Features</title>
         <meta
           name="description"
           content="Where your dream ride becomes reality."
