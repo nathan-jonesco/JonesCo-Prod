@@ -15,6 +15,9 @@ import Finance from '@/components/financing'
 import Contact from '@/components/contact'
 import Banner from '@/components/banner'
 
+import  Bot  from '@/components/zapier'
+
+
 export default function Home() {
   return (
     <>
@@ -28,6 +31,7 @@ export default function Home() {
       <Banner />
       <Header />
       <main className=''>
+        <Bot />
         <Hero />
         <ProcessPlan />
         <CTAA />
